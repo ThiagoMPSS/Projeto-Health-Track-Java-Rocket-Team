@@ -79,8 +79,13 @@ public class Program {
     }
 
     private static void exibirDados(int index) {
-        System.out.println(user.getDadosRegistrados().get(index));
-        if (user.getDadosRegistrados().size() - 1 > index) {
+        if (user.getDadosRegistrados().length == 0){
+            System.out.println("Nenhum dado registrado até o momento!\n");
+            return;
+        }
+
+        System.out.println(user.getDadosRegistrados()[index]);
+        if (user.getDadosRegistrados().length - 1 > index) {
             exibirDados(index + 1);
         }
     }

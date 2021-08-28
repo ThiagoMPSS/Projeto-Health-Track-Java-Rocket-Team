@@ -3,17 +3,10 @@ package com.healthtrack;
 import java.util.ArrayList;
 import java.util.List;
 
-public class User {
-
-    private String nome;
-
-    private String dataNasc;
-
+public class User extends Pessoa {
     private String email;
 
     private String senha;
-
-    private char genero;
 
     private List<RegistroDados> dadosRegistrados = new ArrayList<RegistroDados>();
 
@@ -22,13 +15,6 @@ public class User {
         this.senha = senha;
 
     }
-
-    public void editDados (String dataNasc, String nome, char genero) {
-        this.dataNasc = dataNasc;
-        this.nome = nome;
-        this.genero = genero;
-    }
-
 
     /**
      * Registra os novos dados inseridos pelo usuario
@@ -41,24 +27,10 @@ public class User {
         dadosRegistrados.add(novosDados);
     }
 
-    public List<RegistroDados> getDadosRegistrados() {
-        return dadosRegistrados;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getDataNasc() {
-        return dataNasc;
-    }
-
-    public void setDataNasc(String dataNasc) {
-        this.dataNasc = dataNasc;
+    public RegistroDados[] getDadosRegistrados() {
+        RegistroDados[] dadosArray = new RegistroDados[dadosRegistrados.size()];
+        dadosRegistrados.toArray(dadosArray);
+        return dadosArray;
     }
 
     public String getEmail() {
@@ -67,14 +39,6 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public char getGenero() {
-        return genero;
-    }
-
-    public void setGenero(char genero) {
-        this.genero = genero;
     }
 
 }

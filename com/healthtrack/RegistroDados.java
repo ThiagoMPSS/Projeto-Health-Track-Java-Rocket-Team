@@ -32,7 +32,10 @@ public class RegistroDados {
 
     @Override
     public String toString() {
-        return getData() + "\n" + getAltura() + "\n" + getPeso() + "\n" + getImc() + "\n";
+        return ("Data: " + getData() + "\n" +
+                "Altura: " + getAltura() + "\n" +
+                "Peso: " + getPeso() + "\n" +
+                "IMC: " + getImc() + "\n");
     }
 
 }

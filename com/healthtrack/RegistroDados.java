@@ -1,5 +1,8 @@
 package com.healthtrack;
 
+/**
+ * Classe responsável por armazenar os dados de evolução física do usuário
+ */
 public class RegistroDados {
 
     private String data;
@@ -14,22 +17,47 @@ public class RegistroDados {
         this.imc = peso / (altura * altura);
     }
 
+    
+    /** 
+     * Retorna a data em que o dado foi registrado
+     * @return String
+     */
     public String getData() {
         return data;
     }
 
+    
+    /** 
+     * Retorna a altura
+     * @return float
+     */
     public float getAltura() {
         return altura;
     }
 
+    
+    /** 
+     * Retorna o peso
+     * @return float
+     */
     public float getPeso() {
         return peso;
     }
 
+    
+    /** 
+     * Retorna o calculo do IMC
+     * @return float
+     */
     public float getImc() {
         return imc;
     };
 
+    
+    /** 
+     * Retorna o conjunto de todos os dados
+     * @return String
+     */
     @Override
     public String toString() {
         return ("Data: " + getData() + "\n" +

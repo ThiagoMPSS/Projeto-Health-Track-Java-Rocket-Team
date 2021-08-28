@@ -3,8 +3,10 @@ package com.healthtrack;
 import java.util.GregorianCalendar;
 import java.util.Scanner;
 
+/**
+ * Classe de inicialização da aplicação
+ */
 public class Program {
-
     static User user = null;
 
     public static void main(String[] args) {
@@ -42,7 +44,7 @@ public class Program {
             }
         }
     }
-
+    
     private static void criarUsuario(Scanner scanner) {
         System.out.println("Sem usuario cadastro, cadastre um agora:\n");
         System.out.print("Digite seu email: ");
@@ -58,10 +60,10 @@ public class Program {
         String dtNasc = scanner.nextLine();
         System.out.print("Digite o seu Nome: ");
         String nome = scanner.nextLine();
-        System.out.print("Digite seu genero(F/M): ");
-        char genero = scanner.nextLine().charAt(0);
+        System.out.print("Digite seu gênero(F/M): ");
+        char gênero = scanner.nextLine().charAt(0);
 
-        user.editDados(dtNasc, nome, genero);
+        user.editDados(dtNasc, nome, gênero);
     }
 
     private static void registarNovoDado(Scanner scanner) {

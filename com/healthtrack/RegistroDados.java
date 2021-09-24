@@ -1,7 +1,7 @@
 package com.healthtrack;
 
 /**
- * Classe respons√°vel por armazenar os dados de evolu√ß√£o f√≠sica do usu√°rio
+ * Classe respons·vel por armazenar os dados de evoluÁ„o fÌsica do usu·rio
  */
 public class RegistroDados {
 

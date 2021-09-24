@@ -4,7 +4,7 @@ import java.util.GregorianCalendar;
 import java.util.Scanner;
 
 /**
- * Classe de inicializaÃ§Ã£o da aplicaÃ§Ã£o
+ * Classe de inicialização da aplicação
  */
 public class Program {
     static User user = null;
@@ -60,7 +60,7 @@ public class Program {
         String dtNasc = scanner.nextLine();
         System.out.print("Digite o seu Nome: ");
         String nome = scanner.nextLine();
-        System.out.print("Digite seu gÃªnero(F/M): ");
+        System.out.print("Digite seu gênero(F/M): ");
         char gÃªnero = scanner.nextLine().charAt(0);
 
         user.editDados(dtNasc, nome, gÃªnero);
@@ -82,7 +82,7 @@ public class Program {
 
     private static void exibirDados(int index) {
         if (user.getDadosRegistrados().length == 0){
-            System.out.println("Nenhum dado registrado atÃ© o momento!\n");
+            System.out.println("Nenhum dado registrado até o momento!\n");
             return;
         }
 

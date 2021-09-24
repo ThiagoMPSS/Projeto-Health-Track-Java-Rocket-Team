@@ -1,7 +1,7 @@
 package com.healthtrack;
 
 /**
- * Classe abstrata responsÃ¡vel por armazenar dados pessoais
+ * Classe abstrata responsável por armazenar dados pessoais
  */
 public abstract class Pessoa {
     private char genero;
@@ -44,7 +44,7 @@ public abstract class Pessoa {
     }
     
     /** 
-     * Retorna o GÃªnero
+     * Retorna o Gênero
      * @return char
      */
     public char getGenero() {
@@ -52,7 +52,7 @@ public abstract class Pessoa {
     }
     
     /** 
-     * Define o GÃªnero
+     * Define o Gênero
      * @param genero
      */
     public void setGenero(char genero) {

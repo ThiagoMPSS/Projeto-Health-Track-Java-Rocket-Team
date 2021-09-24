@@ -4,23 +4,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Classe respons√°vel por armazenar os dados do usu√°rio
+ * Classe respons·vel por armazenar os dados do usu·rio
  */
 public class User extends Pessoa {
     private String email;
 
-    private String senha;
+    // private String senha; //
 
     private List<RegistroDados> dadosRegistrados = new ArrayList<RegistroDados>();
 
     public User (String email, String senha) {
         this.email = email;
-        this.senha = senha;
+    //    this.senha = senha; //
 
     }
 
     /**
-     * Registra os novos dados inseridos pelo usu√°rio
+     * Registra os novos dados inseridos pelo usu·rio
      * @param data
      * @param altura
      * @param peso
@@ -32,7 +32,7 @@ public class User extends Pessoa {
 
     
     /** 
-     * Retorna a Array com os dados registrados at√© o momento
+     * Retorna a Array com os dados registrados atÈ o momento
      * @return RegistroDados[]
      */
     public RegistroDados[] getDadosRegistrados() {

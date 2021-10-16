@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="9382F798-42CA-260E-4F70-B5E587E7EDC0" containerWithKeyObject="1D3FAAA7-5F43-26E8-8B2A-45E895162A83" localFKIndex="C4F209E2-D828-8043-C26C-7175A769A6F3" name="t_end_t_bairro_fk">
+<sourceDDLFile>DDL.sql</sourceDDLFile>
+<createdBy>Thiago</createdBy>
+<createdTime>2021-10-15 22:34:33 UTC</createdTime>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<importedID>EB24DCA7-B263-7497-A3D2-1AB6F9734CFB</importedID>
+<referredTableLongName>t_bairro</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>D66C5C28-67F0-DFA9-89DC-4A1ACDB24A9D</referredTableID>
+<keyObject>90B9EACA-AE63-BFF5-02DD-7E7DF12B330E</keyObject>
+<referredKeyID>90B9EACA-AE63-BFF5-02DD-7E7DF12B330E</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>cd_bairro</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

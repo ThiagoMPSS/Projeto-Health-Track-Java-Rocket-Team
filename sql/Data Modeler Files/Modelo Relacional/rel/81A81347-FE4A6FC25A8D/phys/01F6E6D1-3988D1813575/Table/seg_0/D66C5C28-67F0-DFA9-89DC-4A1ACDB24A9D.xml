@@ -1,0 +1,43 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="t_bairro" directorySegmentName="seg_0" id="D66C5C28-67F0-DFA9-89DC-4A1ACDB24A9D">
+<createdBy>Thiago</createdBy>
+<createdTime>2021-10-15 22:34:33 UTC</createdTime>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="cd_bairro" id="29B18D26-77A8-B5FE-A1EB-6D66928AD372">
+<createdBy>Thiago</createdBy>
+<createdTime>2021-10-15 22:34:33 UTC</createdTime>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="nm_bairro" id="80DA0875-761C-4524-FACE-139D2844F6C2">
+<createdBy>Thiago</createdBy>
+<createdTime>2021-10-15 22:34:33 UTC</createdTime>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="t_cidade_cd_cidade" id="A52A538D-3F9F-A662-E183-22530947339A">
+<createdBy>Thiago</createdBy>
+<createdTime>2021-10-15 22:34:33 UTC</createdTime>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="t_bairro_t_cidade_fk" id="0F1B528E-0918-1BEC-7022-AD9EB2B3CCBF">
+<createdBy>Thiago</createdBy>
+<createdTime>2021-10-15 22:34:33 UTC</createdTime>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="t_bairro_pk" id="90B9EACA-AE63-BFF5-02DD-7E7DF12B330E">
+<createdBy>Thiago</createdBy>
+<createdTime>2021-10-15 22:34:33 UTC</createdTime>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5A278642-D0AE-9CEE-F04B-F075D12C11E4" name="t_ati_fis">
+<sourceDDLFile>DDL.sql</sourceDDLFile>
+<createdBy>Thiago</createdBy>
+<createdTime>2021-10-15 22:34:33 UTC</createdTime>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<importedID>4618D5F6-304A-A823-5CB1-5638C6C2AF81</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cd_ati_fis" id="D9D6793B-1D73-5267-B9FE-7018197EA6BA">
+<sourceDDLFile>DDL.sql</sourceDDLFile>
+<createdBy>Thiago</createdBy>
+<createdTime>2021-10-15 22:34:33 UTC</createdTime>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<importedID>D57922A6-76B2-CBC6-7B7E-C738D7D63D82</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>B1255307-891E-1C2F-D5DA-11E2F31FB3F3</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="t_tipo_ati_fis_cd_tipo_ati" id="384EDC00-A360-DB3C-3E53-5DDC7BA3FD29">
+<sourceDDLFile>DDL.sql</sourceDDLFile>
+<createdBy>Thiago</createdBy>
+<createdTime>2021-10-15 22:34:33 UTC</createdTime>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<importedID>DCF83DBD-5CA2-F549-5539-B4F9B6EA390C</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>9379B26B-9C14-4E5C-2A38-EDCD8AF9554C</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C3E29580-80E0-3F45-0963-73069925010B" referredColumn="AC7642B8-8D8E-43C4-B60D-EB2FC11C400B"/>
+</associations>
+</Column>
+<Column name="ds_frequencia_atividade_fisica" id="8D7D4396-D078-5A1E-4C1E-05AD8920825A">
+<sourceDDLFile>DDL.sql</sourceDDLFile>
+<createdBy>Thiago</createdBy>
+<createdTime>2021-10-15 22:34:33 UTC</createdTime>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<importedID>5C7342E3-4367-D57A-B9F3-959472DF816A</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>B1255307-891E-1C2F-D5DA-11E2F31FB3F3</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3ADB82C3-A466-6E1C-78E1-149102067CBC" name="t_ati_fis_pk">
+<sourceDDLFile>DDL.sql</sourceDDLFile>
+<createdBy>Thiago</createdBy>
+<createdTime>2021-10-15 22:34:33 UTC</createdTime>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<importedID>23920C2D-4506-A4EB-028B-874AAA0186A8</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D9D6793B-1D73-5267-B9FE-7018197EA6BA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0B1AAA06-739E-DD2C-5122-61FD1484C5CB" name="t_ati_fis_t_tipo_ati_fis_fk">
+<createdBy>Thiago</createdBy>
+<createdTime>2021-10-15 22:34:33 UTC</createdTime>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="384EDC00-A360-DB3C-3E53-5DDC7BA3FD29"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

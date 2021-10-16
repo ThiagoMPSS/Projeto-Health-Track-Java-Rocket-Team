@@ -1,0 +1,79 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EC94C36C-EC5B-5777-1101-95AF1B0A1FF6" name="t_usuario_email">
+<sourceDDLFile>DDL.sql</sourceDDLFile>
+<createdBy>Thiago</createdBy>
+<createdTime>2021-10-15 22:34:33 UTC</createdTime>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<importedID>27D8990E-9760-031F-4831-EF0518A71F28</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="t_usuario_cd_usuario" id="4008368F-5EAC-2CBF-D81F-79F3015D37A6">
+<sourceDDLFile>DDL.sql</sourceDDLFile>
+<createdBy>Thiago</createdBy>
+<createdTime>2021-10-15 22:34:33 UTC</createdTime>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<importedID>1CB5CBAA-704A-FA21-EDFA-DB318C5F0590</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>21C913BA-BE44-13EB-34F8-03947678B0A2</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E06AE1AE-125B-3682-D032-22D78E1E602B" referredColumn="2A2DE3B0-3609-A20A-62ED-F17C69A8A096"/>
+</associations>
+</Column>
+<Column name="t_email_cd_email" id="8A86E867-E005-6229-9005-EF3D846B0FDB">
+<sourceDDLFile>DDL.sql</sourceDDLFile>
+<createdBy>Thiago</createdBy>
+<createdTime>2021-10-15 22:34:33 UTC</createdTime>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<importedID>FA52926D-708D-870D-C434-357FD89BF184</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>B1255307-891E-1C2F-D5DA-11E2F31FB3F3</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7FFBC13A-2576-A7A1-6E9B-4BF0C3A92286" referredColumn="EE679B80-7243-6B28-C5DD-CD31B01A1D90"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D8460E11-52D7-B16A-3952-3775A6B62065" name="t_usuario_email_pk">
+<sourceDDLFile>DDL.sql</sourceDDLFile>
+<createdBy>Thiago</createdBy>
+<createdTime>2021-10-15 22:34:33 UTC</createdTime>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<importedID>F9B65B26-07B6-DB90-196F-4B7C53EC9016</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4008368F-5EAC-2CBF-D81F-79F3015D37A6"/>
+<colUsage columnID="8A86E867-E005-6229-9005-EF3D846B0FDB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2DB5DBCA-1DAE-99D9-E691-E58CABB8CA2E" name="t_usuario_email_t_email_fk">
+<createdBy>Thiago</createdBy>
+<createdTime>2021-10-15 22:34:33 UTC</createdTime>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8A86E867-E005-6229-9005-EF3D846B0FDB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="087E3230-89A9-411D-C009-62710120860E" name="t_usuario_email_t_usuario_fk">
+<createdBy>Thiago</createdBy>
+<createdTime>2021-10-15 22:34:33 UTC</createdTime>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4008368F-5EAC-2CBF-D81F-79F3015D37A6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

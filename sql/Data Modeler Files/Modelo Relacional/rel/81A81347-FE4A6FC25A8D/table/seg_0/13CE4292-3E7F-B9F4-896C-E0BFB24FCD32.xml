@@ -1,0 +1,102 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="13CE4292-3E7F-B9F4-896C-E0BFB24FCD32" name="t_alim_cons">
+<sourceDDLFile>DDL.sql</sourceDDLFile>
+<createdBy>Thiago</createdBy>
+<createdTime>2021-10-15 22:34:32 UTC</createdTime>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<importedID>7EC2FF2F-BC1A-851A-EADC-2DC51A4B1F84</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="t_usuario_cd_usuario" id="1C7447EE-297E-0958-F556-162536540FEA">
+<sourceDDLFile>DDL.sql</sourceDDLFile>
+<createdBy>Thiago</createdBy>
+<createdTime>2021-10-15 22:34:33 UTC</createdTime>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<importedID>EE611DE8-3BF5-8DA0-BBBB-BFFE04D70402</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>21C913BA-BE44-13EB-34F8-03947678B0A2</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DFE1B7C2-F937-E8D3-9937-06969E9AE612" referredColumn="2A2DE3B0-3609-A20A-62ED-F17C69A8A096"/>
+</associations>
+</Column>
+<Column name="cd_refeicao" id="E3543DA7-4AB9-0E59-49A0-B5B5DF915540">
+<sourceDDLFile>DDL.sql</sourceDDLFile>
+<createdBy>Thiago</createdBy>
+<createdTime>2021-10-15 22:34:33 UTC</createdTime>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<importedID>7D50BE94-A6D0-8EB0-67AC-122E6C79891C</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>CB4A91C3-7D7B-2D72-1F7B-BDA2EAF606FF</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nm_alimento" id="13F09A2B-9351-4493-F3CC-05062E19A0D4">
+<sourceDDLFile>DDL.sql</sourceDDLFile>
+<createdBy>Thiago</createdBy>
+<createdTime>2021-10-15 22:34:33 UTC</createdTime>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<importedID>38C1EC9C-AB77-521F-84F2-4905CA557C2D</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>75CF4947-10F3-30A2-E399-B3E03267E748</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dt_adicao" id="625856A9-90A0-78DB-AED9-31169661E4DE">
+<sourceDDLFile>DDL.sql</sourceDDLFile>
+<createdBy>Thiago</createdBy>
+<createdTime>2021-10-15 22:34:33 UTC</createdTime>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<importedID>5D5BEFCA-61D0-BF09-6713-2285EC0560D4</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>B7DCC266-F755-D68B-F99F-1D7EC9F16181</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nm_calorias" id="DC009E0D-6099-E96C-8506-369C15EA7EEE">
+<sourceDDLFile>DDL.sql</sourceDDLFile>
+<createdBy>Thiago</createdBy>
+<createdTime>2021-10-15 22:34:33 UTC</createdTime>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<importedID>F3A2A2FD-C853-47EE-1C0F-776D022C1950</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>CB4A91C3-7D7B-2D72-1F7B-BDA2EAF606FF</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9D1ED6B1-DF3C-C21B-ECDC-C8D5E9D21CBE" name="t_alim_cons_pk">
+<sourceDDLFile>DDL.sql</sourceDDLFile>
+<createdBy>Thiago</createdBy>
+<createdTime>2021-10-15 22:34:33 UTC</createdTime>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<importedID>A5CC833E-D89C-86D5-1093-C73FE23EAC8A</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1C7447EE-297E-0958-F556-162536540FEA"/>
+<colUsage columnID="E3543DA7-4AB9-0E59-49A0-B5B5DF915540"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="15CB4679-1727-9225-CEF6-5D80F036B8CF" name="t_alim_cons_t_usuario_fk">
+<createdBy>Thiago</createdBy>
+<createdTime>2021-10-15 22:34:33 UTC</createdTime>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1C7447EE-297E-0958-F556-162536540FEA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

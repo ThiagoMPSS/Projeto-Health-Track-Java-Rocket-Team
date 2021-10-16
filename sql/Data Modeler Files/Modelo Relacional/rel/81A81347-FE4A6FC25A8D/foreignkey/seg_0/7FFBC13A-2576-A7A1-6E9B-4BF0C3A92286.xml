@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="7FFBC13A-2576-A7A1-6E9B-4BF0C3A92286" containerWithKeyObject="EC94C36C-EC5B-5777-1101-95AF1B0A1FF6" localFKIndex="2DB5DBCA-1DAE-99D9-E691-E58CABB8CA2E" name="t_usuario_email_t_email_fk">
+<sourceDDLFile>DDL.sql</sourceDDLFile>
+<createdBy>Thiago</createdBy>
+<createdTime>2021-10-15 22:34:33 UTC</createdTime>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<importedID>0D52D486-40C1-8B82-4D37-EE34C1CFE9CD</importedID>
+<referredTableLongName>t_email</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>834B631C-741D-5C25-D589-8D742CE7214D</referredTableID>
+<keyObject>180AE285-FC17-E237-D26A-FE6AF940A846</keyObject>
+<referredKeyID>180AE285-FC17-E237-D26A-FE6AF940A846</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>cd_email</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

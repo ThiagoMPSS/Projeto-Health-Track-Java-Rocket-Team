@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="Relational_1" id="81A81347-DA23-EE15-D520-FE4A6FC25A8D" mainViewID="A723D86A-B968-2CE5-516D-5C588B339D66">
+<createdBy>Thiago</createdBy>
+<createdTime>2021-10-15 22:31:47 UTC</createdTime>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+<selectedRDBMSSite>01F6E6D1-21D0-CFBD-ABDD-3988D1813575</selectedRDBMSSite>
+<importDDLFileStamps>
+<importDDLFileStamp class="oracle.dbtools.crest.imports.DDLFileStamp">
+<fileName>DDL.sql</fileName>
+<pathName>C:\Users\Thiago\Desktop\SQL TRabalho</pathName>
+<dbType>17</dbType>
+</importDDLFileStamp>
+</importDDLFileStamps>
+</relationalModel>

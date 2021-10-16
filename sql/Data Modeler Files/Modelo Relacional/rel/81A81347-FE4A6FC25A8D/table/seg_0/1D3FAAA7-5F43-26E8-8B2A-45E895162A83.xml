@@ -1,0 +1,102 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1D3FAAA7-5F43-26E8-8B2A-45E895162A83" name="t_end">
+<sourceDDLFile>DDL.sql</sourceDDLFile>
+<createdBy>Thiago</createdBy>
+<createdTime>2021-10-15 22:34:33 UTC</createdTime>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<importedID>76810E61-3B7D-E490-0A26-A2C5168EA628</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="nr_cep" id="4C261F21-5368-AB79-E08D-CE690203F91B">
+<sourceDDLFile>DDL.sql</sourceDDLFile>
+<createdBy>Thiago</createdBy>
+<createdTime>2021-10-15 22:34:33 UTC</createdTime>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<importedID>D9D71DFA-2668-0D64-F94B-BB63A83F4A44</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>3A70D8FA-21FD-7E38-EDC7-669A56C82DA3</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="t_bairro_cd_bairro" id="DB0665CF-7459-8173-8406-81BE682EB189">
+<sourceDDLFile>DDL.sql</sourceDDLFile>
+<createdBy>Thiago</createdBy>
+<createdTime>2021-10-15 22:34:33 UTC</createdTime>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<importedID>98EB0680-ACA9-EFEC-C0FE-91BD88DAE9B3</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>B1255307-891E-1C2F-D5DA-11E2F31FB3F3</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9382F798-42CA-260E-4F70-B5E587E7EDC0" referredColumn="29B18D26-77A8-B5FE-A1EB-6D66928AD372"/>
+</associations>
+</Column>
+<Column name="t_tipo_logra_cd_tipo_logra" id="AB1459CC-6EBB-34BE-0353-9122C54D9621">
+<sourceDDLFile>DDL.sql</sourceDDLFile>
+<createdBy>Thiago</createdBy>
+<createdTime>2021-10-15 22:34:33 UTC</createdTime>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<importedID>76843417-E7B8-71AA-02B7-A32608D12CEC</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>B1255307-891E-1C2F-D5DA-11E2F31FB3F3</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="54EED2BE-D046-73E4-E2A4-52B28A4152C5" referredColumn="573C4774-9D2F-10FB-EF87-4FB999D43BE7"/>
+</associations>
+</Column>
+<Column name="ds_logradouro" id="A75CD3F9-16F5-DB15-558A-81FED4B947D7">
+<sourceDDLFile>DDL.sql</sourceDDLFile>
+<createdBy>Thiago</createdBy>
+<createdTime>2021-10-15 22:34:33 UTC</createdTime>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<importedID>EFB2A35B-7705-9331-33EB-6D5F5C79EE55</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>21C913BA-BE44-13EB-34F8-03947678B0A2</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1C7C5850-BF9F-2B6E-16DE-8E53DF077A72" name="t_end_pk">
+<sourceDDLFile>DDL.sql</sourceDDLFile>
+<createdBy>Thiago</createdBy>
+<createdTime>2021-10-15 22:34:33 UTC</createdTime>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<importedID>35CEAA89-250F-2713-8C7F-3DCB59F256C2</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4C261F21-5368-AB79-E08D-CE690203F91B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C4F209E2-D828-8043-C26C-7175A769A6F3" name="t_end_t_bairro_fk">
+<createdBy>Thiago</createdBy>
+<createdTime>2021-10-15 22:34:33 UTC</createdTime>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DB0665CF-7459-8173-8406-81BE682EB189"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F6299CD0-A8CE-CB88-DA29-14D81F86A4EB" name="t_end_t_tipo_logra_fk">
+<createdBy>Thiago</createdBy>
+<createdTime>2021-10-15 22:34:33 UTC</createdTime>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AB1459CC-6EBB-34BE-0353-9122C54D9621"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

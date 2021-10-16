@@ -35,19 +35,19 @@ public class DadosDao implements IDadosDao {
 	/*
 	@Override
 	public void set(Object informacao) {
-		// TODO Auto-generated method stub
+		
 		
 	}
 
 	@Override
 	public void update(long id, Object informacao) {
-		// TODO Auto-generated method stub
+		
 		
 	}
 
 	@Override
 	public void delete(long id) {
-		// TODO Auto-generated method stub
+		
 		
 	}
 	*/

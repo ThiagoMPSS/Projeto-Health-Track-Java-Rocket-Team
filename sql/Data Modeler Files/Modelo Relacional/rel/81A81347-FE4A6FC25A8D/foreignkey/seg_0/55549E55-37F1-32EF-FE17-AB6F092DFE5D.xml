@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="55549E55-37F1-32EF-FE17-AB6F092DFE5D" containerWithKeyObject="FDB953BC-49ED-48F7-844C-5E051940503E" localFKIndex="BDB86547-11BD-33AA-CB2A-EB0676B73F35" name="t_usuario_ati_fis_t_ati_fis_fk">
+<sourceDDLFile>DDL.sql</sourceDDLFile>
+<createdBy>Thiago</createdBy>
+<createdTime>2021-10-15 22:34:33 UTC</createdTime>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<importedID>D63E173D-B5F1-F4AD-68D6-0FE2333634A9</importedID>
+<referredTableLongName>t_ati_fis</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>5A278642-D0AE-9CEE-F04B-F075D12C11E4</referredTableID>
+<keyObject>3ADB82C3-A466-6E1C-78E1-149102067CBC</keyObject>
+<referredKeyID>3ADB82C3-A466-6E1C-78E1-149102067CBC</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>cd_ati_fis</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

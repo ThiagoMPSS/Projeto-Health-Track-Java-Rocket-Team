@@ -1,0 +1,103 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BC93CCFA-C4CD-ADB6-EE5E-7CB05C11ECEA" name="T_USUARIO">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:45:52 UTC</createdTime>
+<generatorID>81A59693-CAAF-0C78-CCC0-30267780351D</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cd_usuario" id="98F8D7F1-1057-802E-ACF1-4C714DB12F0D">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:45:52 UTC</createdTime>
+<generatorID>E31DB304-9D88-DD6B-6BA4-D6ED0DF1C2C0</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>21C913BA-BE44-13EB-34F8-03947678B0A2</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cd_login" id="5543D552-68F2-1AA3-8E42-A295571F6A8C">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:45:52 UTC</createdTime>
+<generatorID>DBD03DE6-6A74-0D8E-F5AA-EBFE72CDC107</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>B1255307-891E-1C2F-D5DA-11E2F31FB3F3</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cd_senha" id="E590993C-4413-6D9F-C0E3-70DE0E5E15B3">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:45:52 UTC</createdTime>
+<generatorID>4E521AE0-92AA-3363-6238-746CA144F267</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>B1255307-891E-1C2F-D5DA-11E2F31FB3F3</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nm_usuario" id="BEE34AD7-3915-401F-5B0C-66E7F3F1598C">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:45:52 UTC</createdTime>
+<generatorID>11E67148-DDCA-7778-B8ED-D585517758F1</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>21C913BA-BE44-13EB-34F8-03947678B0A2</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dt_nascimento" id="98F0E2B5-1017-62E2-0F12-63A8E0EDB0A8">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:45:52 UTC</createdTime>
+<generatorID>4D929E1A-BF70-5075-D1D0-9C33F4BEF405</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>B7DCC266-F755-D68B-F99F-1D7EC9F16181</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nr_cpf" id="72BD3F88-A89D-906A-8993-75829073A421">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:45:52 UTC</createdTime>
+<generatorID>2E629DDB-F222-6D44-493C-2CD1B712D49F</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>8C2ABEE3-53EF-2617-FED4-F1BB3A84926C</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ds_sexo" id="368628C1-F845-BAC6-C4F5-8BD0A8291AB8">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:45:52 UTC</createdTime>
+<generatorID>AB7113C6-6A56-97EA-7E81-C12E2757F2D1</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>8EF4AD3B-3233-3926-B4FB-E955DD20F74B</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="16456A8C-03E9-5637-6DD8-598B7091498F" name="T_USUARIO_PK">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:45:52 UTC</createdTime>
+<generatorID>45DC9B68-904C-E88A-D946-D93F96456C07</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="98F8D7F1-1057-802E-ACF1-4C714DB12F0D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

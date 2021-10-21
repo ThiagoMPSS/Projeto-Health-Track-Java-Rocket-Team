@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="t_usuario_fone_t_fone_fk" directorySegmentName="seg_0" id="50D458CC-ADD9-7352-5756-BB13085EA2F1">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:19:26 UTC</createdTime>
+<generatorID>0907B77F-6743-2E02-3EFA-BECA3B7C80E8</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<engineerTo>
+<item key="5E43247A-4DB9-8B57-2989-257E10D68EEA" value="true"/>
+</engineerTo>
+<sourcePk>569BD5F8-54C6-3A47-8140-2EDBF6F1C188</sourcePk>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>260E7600-66F7-2794-86DB-E0370A27D051</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>0465395A-F37A-3DD1-695E-4626BEF6B4AE</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

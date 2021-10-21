@@ -1,0 +1,79 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A087370A-7656-274C-1F62-0C9393F89665" name="T_USUARIO_EMAIL">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:57:18 UTC</createdTime>
+<generatorID>DC32F052-F440-2E8A-25F0-1F4B485C54AD</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="T_USUARIO_cd_usuario" id="CC9C4063-9479-41D4-B87C-3CD297ADB877">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:57:18 UTC</createdTime>
+<generatorID>BBB5FB21-8E31-BE46-532E-795DE5747D0F</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>21C913BA-BE44-13EB-34F8-03947678B0A2</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9D2A1DE5-F7BA-A90F-FE62-524176CD9E63" referredColumn="A2DF8CAB-8895-32CA-7652-073EC132D6EE"/>
+</associations>
+</Column>
+<Column name="T_EMAIL_cd_email" id="A42040F4-10D7-BE3E-870B-25B7A1B19AD9">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:57:18 UTC</createdTime>
+<generatorID>CD710CA8-5E46-579A-527B-C26C1D0CF99C</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>B1255307-891E-1C2F-D5DA-11E2F31FB3F3</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="14CC7E8A-40E5-0E69-5918-118B77165DC9" referredColumn="D6D40294-B206-8895-DA0A-65D4ACD38572"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C1A44DF0-F494-F5EE-C4A2-8B9CB983D09D" name="T_USUARIO_EMAIL_PK">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:57:18 UTC</createdTime>
+<generatorID>FFCFE057-046E-B50D-FD18-788B169D4C4B</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CC9C4063-9479-41D4-B87C-3CD297ADB877"/>
+<colUsage columnID="A42040F4-10D7-BE3E-870B-25B7A1B19AD9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9F13D455-BA21-4735-A353-049357338797" name="T_USUARIO_EMAIL_T_EMAIL_FK">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:57:18 UTC</createdTime>
+<generatorID>27CF49AE-30F6-6057-BA0B-315910EB5ECC</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A42040F4-10D7-BE3E-870B-25B7A1B19AD9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E35505E2-6F19-549A-0D55-1735F13FBBBF" name="T_USUARIO_EMAIL_T_USUARIO_FK">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:57:18 UTC</createdTime>
+<generatorID>80D502B1-08E1-7178-60C4-35251BC45001</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CC9C4063-9479-41D4-B87C-3CD297ADB877"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,48 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="28E1C267-9F11-BD02-687A-FAA7EE523FEC" name="T_TIPO_LOGRA">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:57:18 UTC</createdTime>
+<generatorID>C729D47C-C756-122F-608F-85EAFE264747</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cd_tipo_logra" id="A84BA002-92F6-F050-7FD0-8F4D1DA44122">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:57:18 UTC</createdTime>
+<generatorID>35A63ACC-2ACC-7470-B89C-3D28C3F00782</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>B1255307-891E-1C2F-D5DA-11E2F31FB3F3</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ds_tipo_logra" id="838F25A1-FA43-3342-F3F4-2707AE4F10C7">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:57:18 UTC</createdTime>
+<generatorID>BDA943A0-BCFE-A216-7ABC-FC3BC9180B10</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>B1255307-891E-1C2F-D5DA-11E2F31FB3F3</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4AA55C58-B4D9-3014-8BFF-84B2D7B27460" name="T_TIPO_LOGRA_PK">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:57:18 UTC</createdTime>
+<generatorID>B62B7DB4-F95C-189D-1DE6-C8956782B6DD</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A84BA002-92F6-F050-7FD0-8F4D1DA44122"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

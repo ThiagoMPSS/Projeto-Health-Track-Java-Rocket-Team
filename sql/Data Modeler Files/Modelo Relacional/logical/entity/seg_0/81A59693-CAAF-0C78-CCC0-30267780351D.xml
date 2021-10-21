@@ -1,0 +1,126 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="81A59693-CAAF-0C78-CCC0-30267780351D" name="T_USUARIO">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:19:26 UTC</createdTime>
+<generatorID>5CB87C8C-67C3-8CB1-E718-5B0661BB775F</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<engineerTo>
+<item key="5E43247A-4DB9-8B57-2989-257E10D68EEA" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="cd usuario" id="E31DB304-9D88-DD6B-6BA4-D6ED0DF1C2C0">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:19:26 UTC</createdTime>
+<generatorID>2A2DE3B0-3609-A20A-62ED-F17C69A8A096</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<engineerTo>
+<item key="5E43247A-4DB9-8B57-2989-257E10D68EEA" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>21C913BA-BE44-13EB-34F8-03947678B0A2</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cd login" id="DBD03DE6-6A74-0D8E-F5AA-EBFE72CDC107">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:19:26 UTC</createdTime>
+<generatorID>27120B2B-74E0-152A-ACCA-3B63FC216624</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<engineerTo>
+<item key="5E43247A-4DB9-8B57-2989-257E10D68EEA" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>B1255307-891E-1C2F-D5DA-11E2F31FB3F3</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cd senha" id="4E521AE0-92AA-3363-6238-746CA144F267">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:19:26 UTC</createdTime>
+<generatorID>3BEE8334-E445-66F6-2E94-355BFBD3A516</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<engineerTo>
+<item key="5E43247A-4DB9-8B57-2989-257E10D68EEA" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>B1255307-891E-1C2F-D5DA-11E2F31FB3F3</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nm usuario" id="11E67148-DDCA-7778-B8ED-D585517758F1">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:19:26 UTC</createdTime>
+<generatorID>03399A67-63A6-3565-9D6F-CA7621FA55E0</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<engineerTo>
+<item key="5E43247A-4DB9-8B57-2989-257E10D68EEA" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>21C913BA-BE44-13EB-34F8-03947678B0A2</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dt nascimento" id="4D929E1A-BF70-5075-D1D0-9C33F4BEF405">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:19:26 UTC</createdTime>
+<generatorID>CA520C69-593B-75D7-5440-431541903302</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<engineerTo>
+<item key="5E43247A-4DB9-8B57-2989-257E10D68EEA" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>B7DCC266-F755-D68B-F99F-1D7EC9F16181</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nr cpf" id="2E629DDB-F222-6D44-493C-2CD1B712D49F">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:19:26 UTC</createdTime>
+<generatorID>5BACEAE1-702B-5405-D066-EC3D314B9AB0</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<engineerTo>
+<item key="5E43247A-4DB9-8B57-2989-257E10D68EEA" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>8C2ABEE3-53EF-2617-FED4-F1BB3A84926C</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ds sexo" id="AB7113C6-6A56-97EA-7E81-C12E2757F2D1">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:19:26 UTC</createdTime>
+<generatorID>FAA4075E-7660-7FA9-9D7D-FA76EB7078E2</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<engineerTo>
+<item key="5E43247A-4DB9-8B57-2989-257E10D68EEA" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>8EF4AD3B-3233-3926-B4FB-E955DD20F74B</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="45DC9B68-904C-E88A-D946-D93F96456C07" name="t usuario pk">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:19:26 UTC</createdTime>
+<generatorID>74E04EA4-0F4B-0F6A-08E6-B797C3D2D65D</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<engineerTo>
+<item key="5E43247A-4DB9-8B57-2989-257E10D68EEA" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>E31DB304-9D88-DD6B-6BA4-D6ED0DF1C2C0</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

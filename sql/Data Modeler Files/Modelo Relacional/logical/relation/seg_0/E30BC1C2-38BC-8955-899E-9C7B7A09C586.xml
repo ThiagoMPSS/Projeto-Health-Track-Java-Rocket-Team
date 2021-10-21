@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="t_end_t_tipo_logra_fk" directorySegmentName="seg_0" id="E30BC1C2-38BC-8955-899E-9C7B7A09C586">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:19:26 UTC</createdTime>
+<generatorID>54EED2BE-D046-73E4-E2A4-52B28A4152C5</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<engineerTo>
+<item key="5E43247A-4DB9-8B57-2989-257E10D68EEA" value="true"/>
+</engineerTo>
+<sourcePk>B62B7DB4-F95C-189D-1DE6-C8956782B6DD</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>C729D47C-C756-122F-608F-85EAFE264747</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>2A206774-40A7-C914-7E0F-ECA16872175E</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

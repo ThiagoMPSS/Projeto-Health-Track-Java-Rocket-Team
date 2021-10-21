@@ -1,0 +1,96 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AADD1727-3FCD-F61B-0088-7AFD510BE7A4" name="T_FONE">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:45:52 UTC</createdTime>
+<generatorID>260E7600-66F7-2794-86DB-E0370A27D051</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="nr_fone_completo" id="8CF1D1C2-42B5-1A48-5DD3-5342F5E03B6B">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:45:52 UTC</createdTime>
+<generatorID>DDE13C10-718C-9AEB-1F39-2AF637075D2A</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>2EF27DD6-DA5C-0538-E533-544BC5C097E6</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="T_TIPO_FONE_cd_tipo_telefone" id="F615CD7C-B9D2-B717-8217-357BCC40E67D">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:45:52 UTC</createdTime>
+<generatorID>85791720-F72F-3665-BAF5-18CF9E94FE6B</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>B1255307-891E-1C2F-D5DA-11E2F31FB3F3</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E40A290B-6F86-5716-4E4D-1F3D0C19DFFD" referredColumn="B284B9AC-C88A-7270-BDC1-6677F8C64151"/>
+</associations>
+</Column>
+<Column name="nr_ddi" id="31F6D693-7DD9-2141-1208-3A65D14F8CCC">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:45:52 UTC</createdTime>
+<generatorID>C99C79B3-33F0-669A-8102-575D48DAAE3F</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>D5137D92-8078-7B93-4AF5-1BFFBC1B7AC0</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nr_ddd" id="96F88656-E0B5-06EC-F802-E2D897E6442E">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:45:52 UTC</createdTime>
+<generatorID>9A5DA8DA-BCDB-C9D6-93CB-66C18D239456</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>979869B3-140A-9C13-D752-109D5F81A4C9</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nr_telefone" id="4A10ED2A-FCEF-207C-ED58-E907F60FA822">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:45:52 UTC</createdTime>
+<generatorID>3536B721-CD94-8803-7C90-AF66B9590C6C</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>65862A9A-15E4-3DC3-381C-ACD2DE859B94</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9ABFA426-E31D-EE8F-BD24-70A8BD7D2214" name="T_FONE_PK">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:45:52 UTC</createdTime>
+<generatorID>569BD5F8-54C6-3A47-8140-2EDBF6F1C188</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8CF1D1C2-42B5-1A48-5DD3-5342F5E03B6B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4912F9FA-6F5D-0B25-24A1-35745A334C2E" name="T_FONE_T_TIPO_FONE_FK">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:45:52 UTC</createdTime>
+<generatorID>48F2AADB-CC70-3C7A-A786-DA302ED054A3</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F615CD7C-B9D2-B717-8217-357BCC40E67D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

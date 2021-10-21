@@ -1,0 +1,85 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CD795F08-C936-4BB1-022E-78A7DB7D8A0C" name="T_PESO">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:45:52 UTC</createdTime>
+<generatorID>DD44D132-3153-8723-C86C-5EEE9D357B7C</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cd_pesagem" id="94AB8F37-68EF-46AF-8C7B-1F44680C8EE6">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:45:52 UTC</createdTime>
+<generatorID>A44772F5-A8EA-B2B4-40DA-BB12E4A16629</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>C7B5EBBF-D2A0-503E-4984-F42065683145</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="T_USUARIO_cd_usuario" id="F098843A-6304-257C-1210-E4CD4BC07753">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:45:52 UTC</createdTime>
+<generatorID>0D2FD89D-F30B-EB30-244E-06E18368DC9C</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>21C913BA-BE44-13EB-34F8-03947678B0A2</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="045FF34E-DBDC-ECEE-A59D-FDE7C46608AE" referredColumn="98F8D7F1-1057-802E-ACF1-4C714DB12F0D"/>
+</associations>
+</Column>
+<Column name="nr_peso" id="3FD7EEB1-B16B-BC72-A498-508170EE04DE">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:45:52 UTC</createdTime>
+<generatorID>F1AC2E9D-3F85-7E47-B0E7-CFF2C49D93C8</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>979869B3-140A-9C13-D752-109D5F81A4C9</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dt_pesagem" id="1BA9D75E-CF34-B3AA-2B85-6F88BEA3366D">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:45:52 UTC</createdTime>
+<generatorID>05A63C7D-981A-0D8D-0BEC-4A3FE759531D</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>B7DCC266-F755-D68B-F99F-1D7EC9F16181</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D4957704-6F31-6CF7-A672-E01CE7EA2030" name="T_PESO_PK">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:45:52 UTC</createdTime>
+<generatorID>CAA2923F-F3EB-ACD6-7108-92A69F7CA6C2</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="94AB8F37-68EF-46AF-8C7B-1F44680C8EE6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A907E9DA-04BA-A422-5804-6487227CAC57" name="T_PESO_T_USUARIO_FK">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:45:52 UTC</createdTime>
+<generatorID>F661BD0D-6F2D-F63A-AE25-7F2DA2E3DD33</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F098843A-6304-257C-1210-E4CD4BC07753"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

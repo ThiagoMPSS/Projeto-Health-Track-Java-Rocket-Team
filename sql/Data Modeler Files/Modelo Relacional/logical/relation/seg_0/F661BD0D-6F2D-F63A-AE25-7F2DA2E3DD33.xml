@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="t_peso_t_usuario_fk" directorySegmentName="seg_0" id="F661BD0D-6F2D-F63A-AE25-7F2DA2E3DD33">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:19:26 UTC</createdTime>
+<generatorID>6863CD71-7887-7DEC-9769-68DD5C2AB7E4</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<engineerTo>
+<item key="5E43247A-4DB9-8B57-2989-257E10D68EEA" value="true"/>
+</engineerTo>
+<sourcePk>45DC9B68-904C-E88A-D946-D93F96456C07</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>81A59693-CAAF-0C78-CCC0-30267780351D</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>DD44D132-3153-8723-C86C-5EEE9D357B7C</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

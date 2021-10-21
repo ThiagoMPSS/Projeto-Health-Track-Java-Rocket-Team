@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DCE5EFC2-9F33-B995-1EFC-33CECE965255" name="T_USUARIO_ATI_FIS">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:57:18 UTC</createdTime>
+<generatorID>95749E5D-E865-DDFD-CCAD-4528D0E7EB12</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cd_usuario_atv_fis" id="D62358F1-3F2E-3D5F-F931-F7BB7E936F5D">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:57:18 UTC</createdTime>
+<generatorID>38E2182A-5B92-272B-AFF8-C59F71668E92</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>CB4A91C3-7D7B-2D72-1F7B-BDA2EAF606FF</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="T_USUARIO_cd_usuario" id="011CE763-3BB9-2AE3-9597-136B97217F49">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:57:18 UTC</createdTime>
+<generatorID>CE5458BB-C519-0B88-6A1A-AC5462E31C2D</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>21C913BA-BE44-13EB-34F8-03947678B0A2</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="74E96A3A-7915-3322-6891-2A46D2A17A9A" referredColumn="A2DF8CAB-8895-32CA-7652-073EC132D6EE"/>
+</associations>
+</Column>
+<Column name="T_ATI_FIS_cd_ati_fis" id="864E86E0-5902-CA47-F73C-E82C63552CF8">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:57:18 UTC</createdTime>
+<generatorID>E84AB513-D836-1377-64FE-AD71D8AAA363</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>B1255307-891E-1C2F-D5DA-11E2F31FB3F3</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8431BEAF-FDB8-D2D4-EC8F-F14B1DC3ACE7" referredColumn="A28C5FF9-F4D2-456D-E869-755C4DAA35D9"/>
+</associations>
+</Column>
+<Column name="dt_atividade" id="2ABD4068-4C80-CFF7-086A-B40253FE0245">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:57:18 UTC</createdTime>
+<generatorID>7392792F-0023-7681-6240-CB587D7584CA</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>B7DCC266-F755-D68B-F99F-1D7EC9F16181</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="36D237B3-42DA-3968-8C6D-881F38C6409C" name="T_USUARIO_ATI_FIS_PK">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:57:18 UTC</createdTime>
+<generatorID>C84A9904-D98E-2EFA-FDC6-6A5B408BBA2D</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D62358F1-3F2E-3D5F-F931-F7BB7E936F5D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C27A3B5A-EAD2-A182-E480-BC5F1D3E9070" name="T_USUARIO_ATI_FIS_T_ATI_FIS_FK">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:57:18 UTC</createdTime>
+<generatorID>7AADAE34-AD60-98B4-612B-C7526F4AFB27</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="864E86E0-5902-CA47-F73C-E82C63552CF8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="96A26DC2-3ECD-0741-D60B-BE997F3B6349" name="T_USUARIO_ATI_FIS_T_USUARIO_FK">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:57:18 UTC</createdTime>
+<generatorID>C4B6A640-B20C-D390-1656-4320219D7794</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="011CE763-3BB9-2AE3-9597-136B97217F49"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

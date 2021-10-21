@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1F611EB2-6196-12E6-6963-61B7AD598AFE" name="T_USUARIO_FONE">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:45:52 UTC</createdTime>
+<generatorID>0465395A-F37A-3DD1-695E-4626BEF6B4AE</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="T_USUARIO_cd_usuario" id="A02433A6-3EE0-8FF7-7CF9-C74E4C548F06">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:45:52 UTC</createdTime>
+<generatorID>8707413D-5C86-2492-DF04-E0B5858C8BF1</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>21C913BA-BE44-13EB-34F8-03947678B0A2</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="21963B17-C87B-33B6-4CB8-E250C2032A9D" referredColumn="98F8D7F1-1057-802E-ACF1-4C714DB12F0D"/>
+</associations>
+</Column>
+<Column name="T_FONE_nr_fone_completo" id="76AC1068-1C26-49FD-8128-43B2866DC07D">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:45:52 UTC</createdTime>
+<generatorID>D423CF79-7F0E-CFF3-269F-ABCD4E555625</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>2EF27DD6-DA5C-0538-E533-544BC5C097E6</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="89114BCB-E2B0-B5D9-B98C-3AE9FDED765F" referredColumn="8CF1D1C2-42B5-1A48-5DD3-5342F5E03B6B"/>
+</associations>
+</Column>
+<Column name="nr_ramal" id="F88AA1D0-E4F1-08F2-2A5B-7A0313D31D09">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:45:52 UTC</createdTime>
+<generatorID>71582D57-63E5-DE71-F5D0-A6DCDBCE89A8</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>CB4A91C3-7D7B-2D72-1F7B-BDA2EAF606FF</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EE07C97C-757F-2439-B2C7-F098AF6C3820" name="T_USUARIO_FONE_PK">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:45:52 UTC</createdTime>
+<generatorID>37BA46BF-01E7-2905-22A2-B4B9BFA3D9A3</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A02433A6-3EE0-8FF7-7CF9-C74E4C548F06"/>
+<colUsage columnID="76AC1068-1C26-49FD-8128-43B2866DC07D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9DA8EB21-95E5-FC17-3656-4A371C641654" name="T_USUARIO_FONE_T_FONE_FK">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:45:52 UTC</createdTime>
+<generatorID>50D458CC-ADD9-7352-5756-BB13085EA2F1</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="76AC1068-1C26-49FD-8128-43B2866DC07D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="40BB8B21-736B-9FFE-D0A5-F9CC828BC9CE" name="T_USUARIO_FONE_T_USUARIO_FK">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:45:52 UTC</createdTime>
+<generatorID>1D2D3D71-1CB0-8E78-4196-43D74F24591D</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A02433A6-3EE0-8FF7-7CF9-C74E4C548F06"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

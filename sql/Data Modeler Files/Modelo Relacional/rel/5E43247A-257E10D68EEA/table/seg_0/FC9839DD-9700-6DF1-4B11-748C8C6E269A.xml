@@ -1,0 +1,96 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FC9839DD-9700-6DF1-4B11-748C8C6E269A" name="T_ALTURA">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:45:52 UTC</createdTime>
+<generatorID>0E50E01D-1E32-041F-8516-DBB01E0B91FB</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cd_altura" id="09613EC0-7635-AE8B-FAAD-491ACC12D612">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:45:52 UTC</createdTime>
+<generatorID>BDCC078B-CAE4-1BF4-C84C-83514A3F0298</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>CB4A91C3-7D7B-2D72-1F7B-BDA2EAF606FF</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="T_USUARIO_cd_usuario" id="E0BD41CB-6DAF-3901-326C-4C99BB071D20">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:45:52 UTC</createdTime>
+<generatorID>69DD3C9F-AC95-6E86-3812-A113D46B1812</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>21C913BA-BE44-13EB-34F8-03947678B0A2</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4525DF29-0524-21DA-74E4-34A00BE100C5" referredColumn="98F8D7F1-1057-802E-ACF1-4C714DB12F0D"/>
+</associations>
+</Column>
+<Column name="nr_altura" id="7C77457B-CB2F-B6FB-1455-3D462A376260">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:45:52 UTC</createdTime>
+<generatorID>54419C29-F4E3-A4B3-E902-DEF8D0BF6803</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>1075668E-3971-AE8D-7631-47AD9ECDBB25</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dt_medicao" id="39465FBF-EFA5-5F91-9E32-AAD4099D11A2">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:45:52 UTC</createdTime>
+<generatorID>03EA044F-4934-2596-7801-05F2CDAB8CEA</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>B7DCC266-F755-D68B-F99F-1D7EC9F16181</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A0B8F430-126D-CC8F-8C61-A18F09AA92C8" name="T_ALTURA_PK">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:45:52 UTC</createdTime>
+<generatorID>21B7F0F4-41DB-E478-F0DC-117AE7056340</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="09613EC0-7635-AE8B-FAAD-491ACC12D612"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D9D007A2-2022-9655-4C13-2413B93518AB" name="T_ALTURA__IDX">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:45:52 UTC</createdTime>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>C8E17B15-32AB-0A56-62FE-70B08F302EE4</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="E0BD41CB-6DAF-3901-326C-4C99BB071D20"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="026E875F-2E4C-042E-45AF-3C871D4FDD0D" name="T_ALTURA_T_USUARIO_FK">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:45:52 UTC</createdTime>
+<generatorID>C8E17B15-32AB-0A56-62FE-70B08F302EE4</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E0BD41CB-6DAF-3901-326C-4C99BB071D20"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

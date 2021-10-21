@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="t_end_t_bairro_fk" directorySegmentName="seg_0" id="F15F49BE-AB83-B505-3F06-847CB564615C">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:19:26 UTC</createdTime>
+<generatorID>9382F798-42CA-260E-4F70-B5E587E7EDC0</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<engineerTo>
+<item key="5E43247A-4DB9-8B57-2989-257E10D68EEA" value="true"/>
+</engineerTo>
+<sourcePk>126EBDAF-ED9B-74FC-71B7-3236E755C7A9</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>D80C0304-EC74-B747-10A8-4D873A97DA94</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>2A206774-40A7-C914-7E0F-ECA16872175E</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

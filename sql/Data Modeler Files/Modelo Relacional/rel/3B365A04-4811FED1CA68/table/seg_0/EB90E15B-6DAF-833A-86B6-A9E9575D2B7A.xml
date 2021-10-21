@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EB90E15B-6DAF-833A-86B6-A9E9575D2B7A" name="T_CIDADE">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:57:18 UTC</createdTime>
+<generatorID>6467A3FA-0A9D-F4CE-F22A-254785F06F62</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cd_cidade" id="78EB4A64-A7A7-E1D0-C95A-EDCF95841A9B">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:57:18 UTC</createdTime>
+<generatorID>4275F359-AF81-1ED5-7BCC-0D44D8ABB30B</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>B1255307-891E-1C2F-D5DA-11E2F31FB3F3</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="t_estado_cd_estado" id="AAB0862D-C8D0-B011-44EA-C5D7E7CF609D">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:57:18 UTC</createdTime>
+<generatorID>F7F46AB4-B2E6-4DC6-AAAB-A7931BE23CAB</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>B1255307-891E-1C2F-D5DA-11E2F31FB3F3</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="29429FA7-CAEC-C5B7-2AD2-92331440410F" referredColumn="3C55210D-3913-2C8B-9A38-7A146F57FACF"/>
+</associations>
+</Column>
+<Column name="nm_cidade" id="EC951985-EA80-8AB9-8167-A9F798BE597B">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:57:18 UTC</createdTime>
+<generatorID>3EFE722C-4684-7070-CF41-D61CBF4FA5AF</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>21C913BA-BE44-13EB-34F8-03947678B0A2</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6E54C63C-B314-6A13-3EFB-691BE49B280F" name="T_CIDADE_PK">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:57:18 UTC</createdTime>
+<generatorID>38717E66-BD36-36A4-5799-B9AB33E0501B</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="78EB4A64-A7A7-E1D0-C95A-EDCF95841A9B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="80E4FD59-0FC5-C9D7-21A2-D58DDB658906" name="T_CIDADE_t_estado_FK">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:57:18 UTC</createdTime>
+<generatorID>166E15BD-3061-788A-9525-4F57EBF85388</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AAB0862D-C8D0-B011-44EA-C5D7E7CF609D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

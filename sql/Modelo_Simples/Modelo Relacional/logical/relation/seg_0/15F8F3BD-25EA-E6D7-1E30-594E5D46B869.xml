@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="T PRESSAO ART T USUARIO FK" directorySegmentName="seg_0" id="15F8F3BD-25EA-E6D7-1E30-594E5D46B869">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:19:26 UTC</createdTime>
+<generatorID>0A9FFCEF-CA1C-5A7F-B0E8-822202B64538</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<engineerTo>
+<item key="7FE78822-A492-3A1C-3613-9ED0C4BEEAC4" value="true"/>
+</engineerTo>
+<sourcePk>45DC9B68-904C-E88A-D946-D93F96456C07</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>81A59693-CAAF-0C78-CCC0-30267780351D</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>AAD4C27D-06DD-DAFA-EFEE-A9AC333CDD84</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

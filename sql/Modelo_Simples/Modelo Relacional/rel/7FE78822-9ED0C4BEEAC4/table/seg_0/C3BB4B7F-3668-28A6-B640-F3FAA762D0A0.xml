@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C3BB4B7F-3668-28A6-B640-F3FAA762D0A0" name="T_IMC">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 16:32:35 UTC</createdTime>
+<generatorID>DD44D132-3153-8723-C86C-5EEE9D357B7C</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cd_imc" id="6B1FFF2D-6D8B-E415-7B4D-53B4356ABB6D">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 16:32:35 UTC</createdTime>
+<generatorID>A44772F5-A8EA-B2B4-40DA-BB12E4A16629</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="T_USUARIO_cd_usuario" id="7F8C8770-7DA4-50DE-7E8D-12CEA0B4D892">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 16:32:35 UTC</createdTime>
+<generatorID>60D77EFC-813F-B412-FE31-A8879AD35D11</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="442453C0-2109-2BCD-64F8-6B0FC4B424EB" referredColumn="2AD92EE0-A126-FC48-C934-54D0CD1A8E77"/>
+</associations>
+</Column>
+<Column name="nr_peso" id="8FC2C474-B442-2615-BEFB-C42B13C56381">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 16:32:35 UTC</createdTime>
+<generatorID>F1AC2E9D-3F85-7E47-B0E7-CFF2C49D93C8</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nr_altura" id="9B6527AE-B1AE-46B4-2FD0-615022623182">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 16:32:35 UTC</createdTime>
+<generatorID>86FE9291-E8CE-C09B-707D-7B370FDBC9D6</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,1,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dt_atualizacao" id="187BC204-9ECC-06AC-0FCF-965D42388B35">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 16:32:35 UTC</createdTime>
+<generatorID>05A63C7D-981A-0D8D-0BEC-4A3FE759531D</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4D79D8DC-8DE3-E9EB-6B5B-1D328968946E" name="T_IMC_PK">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 16:32:35 UTC</createdTime>
+<generatorID>CAA2923F-F3EB-ACD6-7108-92A69F7CA6C2</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6B1FFF2D-6D8B-E415-7B4D-53B4356ABB6D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="58F6B8DC-50A4-0BCD-84B2-8817E59E6988" name="T_IMC_T_USUARIO_FK">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 16:32:35 UTC</createdTime>
+<generatorID>F661BD0D-6F2D-F63A-AE25-7F2DA2E3DD33</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7F8C8770-7DA4-50DE-7E8D-12CEA0B4D892"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

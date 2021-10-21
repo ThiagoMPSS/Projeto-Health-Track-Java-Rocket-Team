@@ -1,0 +1,99 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="5F4EF280-0876-BE13-56AA-2F225200E979" name="T REFE">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:26:17 UTC</createdTime>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<engineerTo>
+<item key="7FE78822-A492-3A1C-3613-9ED0C4BEEAC4" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="cd refeicao" id="1F7B2883-1F8B-C6EC-8882-9D77470D7967">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:28:09 UTC</createdTime>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<engineerTo>
+<item key="7FE78822-A492-3A1C-3613-9ED0C4BEEAC4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cd usuario" id="C4796938-A98F-A189-6FEF-8DF8C44CB1D5">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 15:04:53 UTC</createdTime>
+<generatorID>2BA36967-A3F4-C68E-5E2C-B2811FAD8472</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<engineerTo>
+<item key="7FE78822-A492-3A1C-3613-9ED0C4BEEAC4" value="true"/>
+</engineerTo>
+<referedAttribute>E31DB304-9D88-DD6B-6BA4-D6ED0DF1C2C0</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ds alimento" id="753540FA-BFEB-F23A-907C-4F27CD14A185">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 15:03:00 UTC</createdTime>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<engineerTo>
+<item key="7FE78822-A492-3A1C-3613-9ED0C4BEEAC4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nr calorias" id="E8BAEA13-73E8-7ED2-4C5C-2B1A13135946">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 15:03:32 UTC</createdTime>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<engineerTo>
+<item key="7FE78822-A492-3A1C-3613-9ED0C4BEEAC4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dt refeicao" id="7288FFDA-5A92-C245-A6BC-5A973BAF22FE">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:31:28 UTC</createdTime>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<engineerTo>
+<item key="7FE78822-A492-3A1C-3613-9ED0C4BEEAC4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="281011DF-3B76-944A-77CC-648309806661" name="T_REFE_PK">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:28:19 UTC</createdTime>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<engineerTo>
+<item key="7FE78822-A492-3A1C-3613-9ED0C4BEEAC4" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>1F7B2883-1F8B-C6EC-8882-9D77470D7967</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

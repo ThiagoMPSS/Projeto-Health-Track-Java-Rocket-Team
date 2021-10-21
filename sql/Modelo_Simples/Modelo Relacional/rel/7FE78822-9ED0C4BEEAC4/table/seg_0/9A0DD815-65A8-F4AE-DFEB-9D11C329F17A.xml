@@ -1,0 +1,99 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9A0DD815-65A8-F4AE-DFEB-9D11C329F17A" name="T_REFE">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 16:32:35 UTC</createdTime>
+<generatorID>5F4EF280-0876-BE13-56AA-2F225200E979</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cd_refeicao" id="3922E144-1EDB-7339-C2E2-2A7FB73EAFF9">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 16:32:35 UTC</createdTime>
+<generatorID>1F7B2883-1F8B-C6EC-8882-9D77470D7967</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="T_USUARIO_cd_usuario" id="1CA6E33C-E674-8B04-F05C-C95254DFBC95">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 16:32:35 UTC</createdTime>
+<generatorID>C4796938-A98F-A189-6FEF-8DF8C44CB1D5</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="343E1C8F-B9BC-AC4E-2D82-7821548FCA5C" referredColumn="2AD92EE0-A126-FC48-C934-54D0CD1A8E77"/>
+</associations>
+</Column>
+<Column name="ds_alimento" id="8100D23D-2328-F649-B9C3-AF44D4323DC2">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 16:32:35 UTC</createdTime>
+<generatorID>753540FA-BFEB-F23A-907C-4F27CD14A185</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nr_calorias" id="AF8AF89D-E675-C7EC-41EA-FEE9D7875C70">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 16:32:35 UTC</createdTime>
+<generatorID>E8BAEA13-73E8-7ED2-4C5C-2B1A13135946</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dt_refeicao" id="0816578D-1FE9-1D7A-F032-A05F66860BD8">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 16:32:35 UTC</createdTime>
+<generatorID>7288FFDA-5A92-C245-A6BC-5A973BAF22FE</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="667D0FB9-59BE-5EDD-1EC5-C6246F75AD2A" name="T_REFE_PK">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 16:32:35 UTC</createdTime>
+<generatorID>281011DF-3B76-944A-77CC-648309806661</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3922E144-1EDB-7339-C2E2-2A7FB73EAFF9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="980CF3EA-F0EC-E89B-A46F-20A74E9A8AC4" name="T_REFE_T_USUARIO_FK">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 16:32:35 UTC</createdTime>
+<generatorID>2BA36967-A3F4-C68E-5E2C-B2811FAD8472</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1CA6E33C-E674-8B04-F05C-C95254DFBC95"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

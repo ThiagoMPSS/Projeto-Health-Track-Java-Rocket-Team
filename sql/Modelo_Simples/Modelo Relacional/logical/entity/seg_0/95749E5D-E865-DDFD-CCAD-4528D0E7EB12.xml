@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="95749E5D-E865-DDFD-CCAD-4528D0E7EB12" name="T ATI FIS">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:19:26 UTC</createdTime>
+<generatorID>FDB953BC-49ED-48F7-844C-5E051940503E</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<engineerTo>
+<item key="7FE78822-A492-3A1C-3613-9ED0C4BEEAC4" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="cd ati fis" id="38E2182A-5B92-272B-AFF8-C59F71668E92">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:19:26 UTC</createdTime>
+<generatorID>B4E2DCAD-DCC5-4364-EA69-54C32502F02A</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<engineerTo>
+<item key="7FE78822-A492-3A1C-3613-9ED0C4BEEAC4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cd usuario" id="B443BAAC-9C00-1F88-B64E-91925BBF5A1A">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 14:54:45 UTC</createdTime>
+<generatorID>DECE3E6B-BEFA-FA4F-EC40-D2DCC03B8565</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<engineerTo>
+<item key="7FE78822-A492-3A1C-3613-9ED0C4BEEAC4" value="true"/>
+</engineerTo>
+<referedAttribute>E31DB304-9D88-DD6B-6BA4-D6ED0DF1C2C0</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dt atividade" id="7392792F-0023-7681-6240-CB587D7584CA">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:19:26 UTC</createdTime>
+<generatorID>FBBD7541-C111-69F1-13CA-FD90D8BDDB72</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<engineerTo>
+<item key="7FE78822-A492-3A1C-3613-9ED0C4BEEAC4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ds frequencia ati fis" id="D7134B48-7889-53C8-C8B6-330B42192E7F">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 14:49:18 UTC</createdTime>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<engineerTo>
+<item key="7FE78822-A492-3A1C-3613-9ED0C4BEEAC4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="C84A9904-D98E-2EFA-FDC6-6A5B408BBA2D" name="T_ATI_FIS_PK">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 00:19:26 UTC</createdTime>
+<generatorID>7C2AD47B-D8A1-B755-AE44-9C8E9802AA36</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<engineerTo>
+<item key="7FE78822-A492-3A1C-3613-9ED0C4BEEAC4" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>38E2182A-5B92-272B-AFF8-C59F71668E92</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

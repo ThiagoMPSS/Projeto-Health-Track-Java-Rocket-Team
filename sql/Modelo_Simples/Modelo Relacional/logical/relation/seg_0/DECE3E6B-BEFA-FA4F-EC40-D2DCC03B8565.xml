@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="T ATI FIS T USUARIO FK" directorySegmentName="seg_0" id="DECE3E6B-BEFA-FA4F-EC40-D2DCC03B8565">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 14:51:55 UTC</createdTime>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<engineerTo>
+<item key="7FE78822-A492-3A1C-3613-9ED0C4BEEAC4" value="true"/>
+</engineerTo>
+<sourcePk>45DC9B68-904C-E88A-D946-D93F96456C07</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>81A59693-CAAF-0C78-CCC0-30267780351D</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>95749E5D-E865-DDFD-CCAD-4528D0E7EB12</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

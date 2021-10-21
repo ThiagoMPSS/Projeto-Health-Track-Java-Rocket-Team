@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8609D6E8-4C26-7E44-B62F-E33762C21130" name="T_PRESSAO_ART">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 16:32:35 UTC</createdTime>
+<generatorID>AAD4C27D-06DD-DAFA-EFEE-A9AC333CDD84</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cd_medicao" id="A1F1BA79-3B8D-8CD6-7908-176A8E3EFD0C">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 16:32:35 UTC</createdTime>
+<generatorID>78436F12-4E60-B534-04EB-B788B3DAE9AD</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="T_USUARIO_cd_usuario" id="AA7E9C55-E1DE-09DB-92AB-02BA78792E7D">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 16:32:35 UTC</createdTime>
+<generatorID>D1BCB96E-3002-D692-8102-4B9347CAA702</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="18811ACA-5355-037F-1AB9-FF104F455277" referredColumn="2AD92EE0-A126-FC48-C934-54D0CD1A8E77"/>
+</associations>
+</Column>
+<Column name="nr_pressao" id="79094B4A-1032-A88B-00F7-466B5689BFF3">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 16:32:35 UTC</createdTime>
+<generatorID>E08B899B-456F-0BBF-5A24-41BB0DE11FA4</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<dataTypeScale>3</dataTypeScale>
+<ownDataTypeParameters>,3,3</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dt_medicao" id="2530D384-3ECC-5574-0634-2AE5ACD0F889">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 16:32:35 UTC</createdTime>
+<generatorID>B09A2A94-5795-0C2F-13B8-C2DE143F1436</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4923715D-AF6C-18A4-E60B-B3BDDCEA390E" name="T_PRESSAO_ART_PK">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 16:32:35 UTC</createdTime>
+<generatorID>3E854502-C5DF-8A82-B1E2-C8FAE6485165</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A1F1BA79-3B8D-8CD6-7908-176A8E3EFD0C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D74DDFEB-79B4-34FF-B86D-A77935EEF460" name="T_PRESSAO_ART_T_USUARIO_FK">
+<createdBy>Rafael</createdBy>
+<createdTime>2021-10-21 16:32:35 UTC</createdTime>
+<generatorID>15F8F3BD-25EA-E6D7-1E30-594E5D46B869</generatorID>
+<ownerDesignName>Modelo Relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AA7E9C55-E1DE-09DB-92AB-02BA78792E7D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

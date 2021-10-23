@@ -1,3 +1,4 @@
+package models;
 /**
  * Classe respons�vel por armazenar os dados de evolu��o f�sica do usu�rio
  */
@@ -14,6 +15,7 @@ public class RegistroDados {
         this.peso = peso;
         this.imc = peso / (altura * altura);
     }
+
 
     
     /** 

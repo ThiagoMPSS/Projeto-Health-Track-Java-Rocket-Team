@@ -1,40 +1,40 @@
 package config;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class ConnManager {
   private static ConnManager instance;
-  
-  private ConnManager(){}
 
-  public static ConnManager getInstance(){
-    if(instance == null){
+  private ConnManager() {
+  }
+
+  public static ConnManager getInstance() {
+    if (instance == null) {
       instance = new ConnManager();
     }
     return instance;
   }
 
-  public Connection getConn(){
+  public Connection getConn() {
     Connection conn = null;
 
-    try{
+    try {
       Class.forName("oracle.jdbc.driver.OracleDriver");
 
-        conn =
-        DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:1521:xe",
-                                    "system","123");
+      conn = DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:1521:xe", "system", "semsenha");
 
-    System.out.println("Foi foda-se");
+      // System.out.println("Foi foda-se");
 
-    } catch(SQLException e) {
+    } catch (SQLException e) {
       System.out.println(e);
       e.printStackTrace();
-      System.out.println("Não Foi foda-se");
-    } catch(ClassNotFoundException e){
+      // System.out.println("Não Foi foda-se");
+    } catch (ClassNotFoundException e) {
       System.out.println(e);
       e.printStackTrace();
-      System.out.println("Não Foi foda-se");
+      // System.out.println("Não Foi foda-se");
     }
     return conn;
   }

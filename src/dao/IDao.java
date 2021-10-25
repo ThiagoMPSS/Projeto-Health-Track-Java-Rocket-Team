@@ -1,8 +1,12 @@
 package dao;
+
+import models.ModelDefault;
+
 public interface IDao {
-	Object get(long id);
-	Object[] getAll();
-	void insert();
+	ModelDefault get(long id);
+	ModelDefault[] getAll();
+	ModelDefault insert(ModelDefault obj);
+	int getLastIndex();
 	/*
 	void set(Object informacao);
 	void update(long id, Object informacao);

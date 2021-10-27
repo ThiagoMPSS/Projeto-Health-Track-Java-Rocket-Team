@@ -9,36 +9,33 @@ import java.util.ArrayList;
 import java.util.List;
 
 import config.ConnManager;
+import models.Imc;
 import models.ModelDefault;
-import models.Pressao;
 
-public class PressaoDAO implements IDao {
+public class Imc_DAO implements IDao {
 
     @Override
-    public ModelDefault get(long cd_medicao) {
+    public ModelDefault get(long cd_imc) {
         Connection conn = ConnManager.getInstance().getConn();
 
         try {
-            PreparedStatement pstmt = conn.prepareStatement("SELECT * FROM T_PRESSAO_ART WHERE cd_medicao = ?");
-            pstmt.setLong(1, cd_medicao);
+            PreparedStatement pstmt = conn.prepareStatement("SELECT * FROM T_IMC WHERE CD_IMC = ?");
+            pstmt.setLong(1, cd_imc);
             ResultSet result = pstmt.executeQuery();
 
             if (result.next()) {
-                long cd_usuario = result.getLong("t_usuario_cd_usuario");
-                float nr_pressao = result.getFloat("nr_pressao");
-                Date dt_medicao = result.getDate("dt_medicao");
-                return new Pressao(cd_medicao, cd_usuario, nr_pressao, dt_medicao);
+                long cd_usuario = result.getLong("cd_imc");
+                float nr_peso = result.getFloat("cd_usuario");
+                float nr_altura = result.getFloat("nr_altura");
+                Date dt_atualizacao = result.getDate("dt_atualizacao");
+
+                return new Imc(cd_imc, cd_usuario, nr_peso, nr_altura, dt_atualizacao);
             }
 
         } catch (SQLException e) {
             e.printStackTrace();
-        } finally {
-            try {
-                conn.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
         }
+
         return null;
     }
 
@@ -48,19 +45,21 @@ public class PressaoDAO implements IDao {
         Connection conn = ConnManager.getInstance().getConn();
 
         try {
-            PreparedStatement pstmt = conn.prepareStatement("SELECT * FROM T_PRESSAO_ART");
+            PreparedStatement pstmt = conn.prepareStatement("SELECT * FROM T_IMC");
 
             ResultSet result = pstmt.executeQuery();
 
             while (result.next()) {
-                long cd_usuario = result.getLong("t_usuario_cd_usuario");
-                long cd_medicao = result.getLong("cd_medicao");
-                float nr_pressao = result.getFloat("nr_pressao");
-                Date dt_medicao = result.getDate("dt_medicao");
+                long cd_imc = result.getLong("cd_imc");
+                long cd_usuario = result.getLong("cd_imc");
+                float nr_peso = result.getFloat("cd_usuario");
+                float nr_altura = result.getFloat("nr_altura");
+                Date dt_atualizacao = result.getDate("dt_atualizacao");
 
-                listaPressao.add(new Pressao(cd_medicao, cd_usuario, nr_pressao, dt_medicao));
+                listaPressao.add(new Imc(cd_imc, cd_usuario, nr_peso, nr_altura, dt_atualizacao));
             }
-
+            
+            pstmt.close();
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
@@ -70,31 +69,35 @@ public class PressaoDAO implements IDao {
                 e.printStackTrace();
             }
         }
-        Pressao[] ArrayPressao = new Pressao[listaPressao.size()];
+
+        Imc[] ArrayPressao = new Imc[listaPressao.size()];
         listaPressao.toArray(ArrayPressao);
         return ArrayPressao;
     }
 
-    public ModelDefault insert(Pressao pressao) {
+    public ModelDefault insert(Imc pressao) {
         return insert((ModelDefault) pressao);
     }
 
     @Override
     public ModelDefault insert(ModelDefault dados) {
-        Pressao pressao = (Pressao) dados;
+        Imc imc = (Imc) dados;
         Connection conn = ConnManager.getInstance().getConn();
-
+        
         try {
             PreparedStatement pstmt = conn.prepareStatement(
-                    "INSERT INTO T_PRESSAO_ART (cd_medicao, t_usuario_cd_usuario, nr_pressao, dt_medicao) VALUES(SEQ_T_PRESSAO_ART.nextVal, ?, ?, ?)");
-            pstmt.setLong(1, pressao.getCd_Usuario());
-            pstmt.setFloat(2, pressao.getNr_Pressao());
-            pstmt.setDate(3, pressao.getDt_Medicao());
+                    "INSERT INTO T_IMC (cd_imc, cd_usuario, nr_peso, nr_altura, dt_atualizacao) VALUES(SEQ_T_IMC.nextVal, ?, ?, ?, ?)");
+            pstmt.setLong(1, imc.getCd_usuario());
+            pstmt.setFloat(2, imc.getNr_peso());
+            pstmt.setFloat(3, imc.getNr_altura());
+            pstmt.setDate(4, imc.getDt_atualizacao());
+
 
             pstmt.executeUpdate();
 
-            pressao.setCd_Medicao(getLastIndex());
-            return pressao;
+            imc.setCd_imc(getLastIndex());
+            pstmt.close();
+            return imc;
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
@@ -104,16 +107,18 @@ public class PressaoDAO implements IDao {
                 e.printStackTrace();
             }
         }
-        return pressao;
+
+        return imc;
     }
 
     public void delete() {
         Connection conn = ConnManager.getInstance().getConn();
 
         try {
-            PreparedStatement pstmt = conn.prepareStatement("DELETE FROM T_PRESSAO_ART");
+            PreparedStatement pstmt = conn.prepareStatement("DELETE FROM T_IMC");
 
             pstmt.executeUpdate();
+            pstmt.close();
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
@@ -132,11 +137,12 @@ public class PressaoDAO implements IDao {
         
         try {
             PreparedStatement pstmt = conn.prepareStatement(
-                    "select cd_medicao from t_pressao_art order by cd_medicao desc fetch first 1 row only");
+                    "select cd_imc from t_imc order by cd_imc desc fetch first 1 row only");
             ResultSet rs = pstmt.executeQuery();
 
             if (rs.next())
                 Index = rs.getInt(1);
+            pstmt.close();
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
@@ -146,8 +152,6 @@ public class PressaoDAO implements IDao {
                 e.printStackTrace();
             }
         }
-
         return Index;
     }
-
 }

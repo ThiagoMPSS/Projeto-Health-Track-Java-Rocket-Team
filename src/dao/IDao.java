@@ -6,6 +6,8 @@ public interface IDao {
 	ModelDefault get(long id);
 	ModelDefault[] getAll();
 	ModelDefault insert(ModelDefault obj);
+	void delete();
+	//Retorna o ultimo valor da chave primaria
 	int getLastIndex();
 	/*
 	void set(Object informacao);

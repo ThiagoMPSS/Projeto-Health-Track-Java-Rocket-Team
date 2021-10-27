@@ -57,6 +57,11 @@ public class Pressao extends ModelDefault {
     @Override
     public String toString() {
         return ("Nr_pressao: " + getNr_Pressao() + "\n" +
-                "Dt_medicao: " + getDt_Medicao() + "\n");
+                "Dt_medicao: " + getDt_Medicao());
+    }
+
+    @Override
+    public Object getPK() {
+        return getCd_Medicao();
     }
 }

@@ -10,35 +10,32 @@ import java.util.List;
 
 import config.ConnManager;
 import models.ModelDefault;
-import models.Pressao;
+import models.Refeicao;
 
-public class PressaoDAO implements IDao {
-
+public class RefeicaoDAO implements IDao {
     @Override
-    public ModelDefault get(long cd_medicao) {
+    public ModelDefault get(long cd_refeicao) {
         Connection conn = ConnManager.getInstance().getConn();
 
         try {
-            PreparedStatement pstmt = conn.prepareStatement("SELECT * FROM T_PRESSAO_ART WHERE cd_medicao = ?");
-            pstmt.setLong(1, cd_medicao);
+            PreparedStatement pstmt = conn.prepareStatement("SELECT * FROM T_REFE WHERE CD_REFEICAO = ?");
+            pstmt.setLong(1, cd_refeicao);
             ResultSet result = pstmt.executeQuery();
 
             if (result.next()) {
-                long cd_usuario = result.getLong("t_usuario_cd_usuario");
-                float nr_pressao = result.getFloat("nr_pressao");
-                Date dt_medicao = result.getDate("dt_medicao");
-                return new Pressao(cd_medicao, cd_usuario, nr_pressao, dt_medicao);
+                long cd_usuario = result.getLong("cd_usuario");
+                String ds_alimento = result.getString("ds_alimento");
+                float nr_calorias = result.getFloat("nr_calorias");
+                Date dt_refeicao = result.getDate("dt_refeicao");
+                
+
+                return new Refeicao(cd_refeicao, cd_usuario, ds_alimento, nr_calorias, dt_refeicao);
             }
 
         } catch (SQLException e) {
             e.printStackTrace();
-        } finally {
-            try {
-                conn.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
         }
+
         return null;
     }
 
@@ -48,19 +45,21 @@ public class PressaoDAO implements IDao {
         Connection conn = ConnManager.getInstance().getConn();
 
         try {
-            PreparedStatement pstmt = conn.prepareStatement("SELECT * FROM T_PRESSAO_ART");
+            PreparedStatement pstmt = conn.prepareStatement("SELECT * FROM T_REFE");
 
             ResultSet result = pstmt.executeQuery();
 
             while (result.next()) {
-                long cd_usuario = result.getLong("t_usuario_cd_usuario");
-                long cd_medicao = result.getLong("cd_medicao");
-                float nr_pressao = result.getFloat("nr_pressao");
-                Date dt_medicao = result.getDate("dt_medicao");
+                long cd_refeicao = result.getLong("cd_refeicao");
+                long cd_usuario = result.getLong("cd_usuario");
+                String ds_alimento = result.getString("ds_alimento");
+                float nr_calorias = result.getFloat("nr_calorias");
+                Date dt_refeicao = result.getDate("dt_refeicao");
 
-                listaPressao.add(new Pressao(cd_medicao, cd_usuario, nr_pressao, dt_medicao));
+                listaPressao.add(new Refeicao(cd_refeicao, cd_usuario, ds_alimento, nr_calorias, dt_refeicao));
             }
-
+            
+            pstmt.close();
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
@@ -70,31 +69,35 @@ public class PressaoDAO implements IDao {
                 e.printStackTrace();
             }
         }
-        Pressao[] ArrayPressao = new Pressao[listaPressao.size()];
+
+        Refeicao[] ArrayPressao = new Refeicao[listaPressao.size()];
         listaPressao.toArray(ArrayPressao);
         return ArrayPressao;
     }
 
-    public ModelDefault insert(Pressao pressao) {
+    public ModelDefault insert(Refeicao pressao) {
         return insert((ModelDefault) pressao);
     }
 
     @Override
     public ModelDefault insert(ModelDefault dados) {
-        Pressao pressao = (Pressao) dados;
+        Refeicao refeicao = (Refeicao) dados;
         Connection conn = ConnManager.getInstance().getConn();
-
+        
         try {
             PreparedStatement pstmt = conn.prepareStatement(
-                    "INSERT INTO T_PRESSAO_ART (cd_medicao, t_usuario_cd_usuario, nr_pressao, dt_medicao) VALUES(SEQ_T_PRESSAO_ART.nextVal, ?, ?, ?)");
-            pstmt.setLong(1, pressao.getCd_Usuario());
-            pstmt.setFloat(2, pressao.getNr_Pressao());
-            pstmt.setDate(3, pressao.getDt_Medicao());
+                    "INSERT INTO T_REFE (cd_refeicao, cd_usuario, ds_alimento, nr_calorias, dt_refeicao) VALUES (SEQ_T_IMC.nextVal, ?, ?, ?, ?)");
+            pstmt.setLong(1, refeicao.getCd_usuario());
+            pstmt.setString(2, refeicao.getDs_alimento());
+            pstmt.setFloat(3, refeicao.getNr_calorias());
+            pstmt.setDate(4, refeicao.getDt_refeicao());
+
 
             pstmt.executeUpdate();
 
-            pressao.setCd_Medicao(getLastIndex());
-            return pressao;
+            refeicao.setCd_refeicao(getLastIndex());
+            pstmt.close();
+            return refeicao;
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
@@ -104,16 +107,19 @@ public class PressaoDAO implements IDao {
                 e.printStackTrace();
             }
         }
-        return pressao;
+
+        return refeicao;
     }
 
+    @Override
     public void delete() {
         Connection conn = ConnManager.getInstance().getConn();
 
         try {
-            PreparedStatement pstmt = conn.prepareStatement("DELETE FROM T_PRESSAO_ART");
+            PreparedStatement pstmt = conn.prepareStatement("DELETE FROM T_REFE");
 
             pstmt.executeUpdate();
+            pstmt.close();
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
@@ -132,11 +138,12 @@ public class PressaoDAO implements IDao {
         
         try {
             PreparedStatement pstmt = conn.prepareStatement(
-                    "select cd_medicao from t_pressao_art order by cd_medicao desc fetch first 1 row only");
+                    "select cd_refeicao from T_REFE order by cd_refeicao desc fetch first 1 row only");
             ResultSet rs = pstmt.executeQuery();
 
             if (rs.next())
                 Index = rs.getInt(1);
+            pstmt.close();
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
@@ -146,8 +153,6 @@ public class PressaoDAO implements IDao {
                 e.printStackTrace();
             }
         }
-
         return Index;
     }
-
 }

@@ -1,0 +1,35 @@
+
+
+.custom-form {
+    width: 100%;
+    max-width: 400px;
+    flex-grow: 1;
+}
+
+.custom-form-title {
+    font-family: var(--fonte-padrao);
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin: 50px auto;
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        flex-direction: row;
+       
+        align-items: baseline;
+    }
+
+}

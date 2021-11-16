@@ -1,0 +1,115 @@
+:root {
+    --vermelho-destaque: #FF3838;
+    --verde-destaque: #009C00;
+    --bg-neve: #FBF9F9;
+    --bg-cinza: #DCD7D7;
+    --shadow: 1px 1px 3px 1px rgba(0, 0, 0, .3);
+    --fonte-padrao: 'Poppins', sans-serif;
+    --cor-fonte: #242424;
+}
+
+ul, p, a {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    color: black;
+}
+
+ul, li {
+    list-style: none;
+    
+}
+
+.app-header {
+    padding: 30px;
+    max-width: 100vw;
+    height: 120px;
+    border-bottom: 2px solid rgba(164, 164, 164, 0.3);
+}
+
+.app-header-title {    
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: var(--fonte-padrao);
+    color: var(--cor-fonte);
+}
+
+.app-body {
+    background-color: var(--bg-neve);
+}
+
+.fa-user-circle {
+    float: right;
+    font-size: 2.5rem;
+    position: relative;
+    /*top: -40px;*/
+    top: 0px;
+    right: 50px;
+}
+
+.custom-button {
+    border: none;
+    background-color: var(--vermelho-destaque);
+    color: white;
+    height: 40px;
+    border-radius: 20px;
+    font-weight: bold;
+    min-width: 80px;
+}
+
+.custom-button-light {
+    background-color: none;
+    border: solid 2px var(--vermelho-destaque);
+    color: var(--vermelho-destaque);
+    font-weight: bold;
+    height: 40px;
+    border-radius: 20px;
+}
+
+
+.custom-button:hover, .custom-button-light:hover {
+    opacity: .7;
+}
+
+.table {
+    font-family: var(--fonte-padrao);
+}
+
+.titulo-subpaginas {
+    font-family: var(--fonte-padrao);
+    font-weight: 600;
+    font-size: 2rem;
+    color: var(--cor-fonte);
+}
+
+.navbar-inferior h4 {
+    font-family: var(--fonte-padrao);
+    color: var(--cor-fonte);
+}
+
+.navbar-inferior h4:hover {
+    color: var(--vermelho-destaque);
+}
+
+.app-footer {
+    height: 80px;
+    border-top: 2px solid rgba(164, 164, 164, 0.3);
+    text-align: center;
+}
+
+.app-footer p {
+    font-family: var(--fonte-padrao);
+    font-size: .75rem;
+    color: var(--cor-fonte);
+    margin-top: 20px;
+    
+}
+
+.restrict-sm {
+    max-width: 400px;
+}
+
+.restrict-md {
+    max-width: 600px;
+}

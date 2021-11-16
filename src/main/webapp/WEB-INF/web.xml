@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.4" xmlns="http://Java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	
+	<!-- CRUD -->
+<!-- 		<servlet>
+			<servlet-name>CRUD</servlet-name>
+			<servlet-class>com.RocketTeam.Web.CRUD</servlet-class>
+		</servlet>
+		<servlet-mapping>
+			<servlet-name>CRUD</servlet-name>
+			<url-pattern>/*/CRUD</url-pattern>
+		</servlet-mapping> -->
+	
+	<!-- Login -->	
+		<servlet>
+			<servlet-name>login</servlet-name>
+			<jsp-file>/pages/login/login.jsp</jsp-file>
+		</servlet>
+		<servlet-mapping>
+			<servlet-name>login</servlet-name>
+			<url-pattern>/Login</url-pattern>
+		</servlet-mapping>
+	
+	<!-- Dados Gerais -->
+		<servlet>
+			<servlet-name>dados-gerais</servlet-name>
+			<jsp-file>/pages/dados-gerais/dados-gerais.jsp</jsp-file>
+		</servlet>
+		<servlet-mapping>
+			<servlet-name>dados-gerais</servlet-name>
+			<url-pattern>/Dashboard</url-pattern>
+		</servlet-mapping>
+		<servlet>
+			<servlet-name>dados-gerais-add</servlet-name>
+			<jsp-file>/pages/dados-gerais/adiciona-dados-gerais.jsp</jsp-file>
+		</servlet>
+		<servlet-mapping>
+			<servlet-name>dados-gerais-add</servlet-name>
+			<url-pattern>/DadosGerais/Add</url-pattern>
+		</servlet-mapping>
+		<servlet>
+			<servlet-name>dados-gerais-edit</servlet-name>
+			<jsp-file>/pages/dados-gerais/editar-dados-gerais.jsp</jsp-file>
+		</servlet>
+		<servlet-mapping>
+			<servlet-name>dados-gerais-edit</servlet-name>
+			<url-pattern>/DadosGerais/Edit</url-pattern>
+		</servlet-mapping>
+	
+	<!-- Refeições -->
+		<servlet>
+			<servlet-name>refeicoes</servlet-name>
+			<jsp-file>/pages/refeicoes/refeicoes.jsp</jsp-file>
+		</servlet>
+		<servlet-mapping>
+			<servlet-name>refeicoes</servlet-name>
+			<url-pattern>/Refeicoes</url-pattern>
+		</servlet-mapping>
+		<servlet>
+			<servlet-name>refeicoes-add</servlet-name>
+			<jsp-file>/pages/refeicoes/adiciona-refeicoes.jsp</jsp-file>
+		</servlet>
+		<servlet-mapping>
+			<servlet-name>refeicoes-add</servlet-name>
+			<url-pattern>/Refeicoes/Add</url-pattern>
+		</servlet-mapping>
+		<servlet>
+			<servlet-name>refeicoes-edit</servlet-name>
+			<jsp-file>/pages/refeicoes/edita-refeicoes.jsp</jsp-file>
+		</servlet>
+		<servlet-mapping>
+			<servlet-name>refeicoes-edit</servlet-name>
+			<url-pattern>/Refeicoes/Edit</url-pattern>
+		</servlet-mapping>
+	
+	<!-- Pressão -->
+		<servlet>
+			<servlet-name>pressao</servlet-name>
+			<jsp-file>/pages/pressao/pressoes.jsp</jsp-file>
+		</servlet>
+		<servlet-mapping>
+			<servlet-name>pressao</servlet-name>
+			<url-pattern>/Pressao</url-pattern>
+		</servlet-mapping>
+		<servlet>
+			<servlet-name>pressao-add</servlet-name>
+			<jsp-file>/pages/pressao/adiciona-pressao.jsp</jsp-file>
+		</servlet>
+		<servlet-mapping>
+			<servlet-name>pressao-add</servlet-name>
+			<url-pattern>/Pressao/Add</url-pattern>
+		</servlet-mapping>
+		<servlet>
+			<servlet-name>pressao-edit</servlet-name>
+			<jsp-file>/pages/pressao/edita-pressao.jsp</jsp-file>
+		</servlet>
+		<servlet-mapping>
+			<servlet-name>pressao-edit</servlet-name>
+			<url-pattern>/Pressao/Edit</url-pattern>
+		</servlet-mapping>
+	
+	<!-- Atividade Física -->
+		<servlet>
+			<servlet-name>ativ-fis</servlet-name>
+			<jsp-file>/pages/atividade-fisica/atividade-fisica.jsp</jsp-file>
+		</servlet>
+		<servlet-mapping>
+			<servlet-name>ativ-fis</servlet-name>
+			<url-pattern>/Exercicios</url-pattern>
+		</servlet-mapping>
+		<servlet>
+			<servlet-name>ativ-fis-add</servlet-name>
+			<jsp-file>/pages/atividade-fisica/adiciona-atividade-fisica.jsp</jsp-file>
+		</servlet>
+		<servlet-mapping>
+			<servlet-name>ativ-fis-add</servlet-name>
+			<url-pattern>/Exercicios/Add</url-pattern>
+		</servlet-mapping>
+		<servlet>
+			<servlet-name>ativ-fis-edit</servlet-name>
+			<jsp-file>/pages/atividade-fisica/edita-atividade-fisica.jsp</jsp-file>
+		</servlet>
+		<servlet-mapping>
+			<servlet-name>ativ-fis-edit</servlet-name>
+			<url-pattern>/Exercicios/Edit</url-pattern>
+		</servlet-mapping>
+</web-app>

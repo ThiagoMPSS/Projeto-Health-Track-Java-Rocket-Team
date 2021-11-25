@@ -16,6 +16,12 @@ public class Pressao extends ModelDefault {
         this.dt_medicao = dt_medicao;
     }
 
+    public Pressao(long cd_usuario, float nr_pressao, Date dt_medicao) {
+        this.cd_usuario = cd_usuario;
+        this.nr_pressao = nr_pressao;
+        this.dt_medicao = dt_medicao;
+    }
+
     public Pressao(long cd_usuario, float nr_pressao) {
         this.cd_usuario = cd_usuario;
         this.nr_pressao = nr_pressao;

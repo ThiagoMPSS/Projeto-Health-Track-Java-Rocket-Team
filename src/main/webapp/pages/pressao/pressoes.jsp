@@ -36,36 +36,25 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<th scope="row">15/09/2021</th>
-						<td scope="col">12/8</td>
-						<td scope="col">
-							<div class="d-flex gap-2">
-								<button class="btn btn-light" onClick="location.href='./Pressao/Edit?id=1'">Editar</button>
-								<button class="btn btn-danger" onClick="location.href='./Pressao/Delete?id=1'">Deletar</button>
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<th scope="row">15/09/2021</th>
-						<td scope="col">12/8</td>
-						<td scope="col">
-							<div class="d-flex gap-2">
-								<button class="btn btn-light">Editar</button>
-								<button class="btn btn-danger">Deletar</button>
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<th scope="row">15/09/2021</th>
-						<td scope="col">12/8</td>
-						<td scope="col">
-							<div class="d-flex gap-2">
-								<button class="btn btn-light">Editar</button>
-								<button class="btn btn-danger">Deletar</button>
-							</div>
-						</td>
-					</tr>
+					<jsp:useBean id="dao" class="com.RocketTeam.dao.PressaoDAO" />
+					<% Object[] itens = dao.getByFk(1); %>
+					<c:set scope="page" var="itens" value="<%= itens %>"/>
+					<c:set scope="page" var="itensCount" value="<%= itens.length %>"/>
+					<c:if test="${itensCount < 1}">
+						<td colspan="5" style="text-align: center">Nenhum item encontrado!</td>
+					</c:if>
+					<c:forEach items="${itens}" var="item" >
+						<tr>
+							<th scope="row"><c:out value="${item.getDt_Medicao()}" /></th>
+							<td scope="col"><c:out value="${item.getNr_Pressao()}" /></td>
+							<td scope="col">
+								<div class="d-flex gap-2">
+									<button class="btn btn-light" onClick="location.href='./Pressao/Edit?id=${item.getPK()}'">Editar</button>
+									<button class="btn btn-danger" onClick="location.href='./Pressao/Delete/CRUD?id=${item.getPK()}'">Deletar</button>
+								</div>
+							</td>
+						</tr>
+					</c:forEach>
 				</tbody>
 			</table>
 		</div>

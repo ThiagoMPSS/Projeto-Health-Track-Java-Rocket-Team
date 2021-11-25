@@ -19,6 +19,13 @@ public class Refeicao extends ModelDefault {
         this.dt_refeicao = dt_refeicao;
     }
 
+    public Refeicao(long cd_usuario, String ds_alimento, float nr_calorias, Date dt_refeicao) {
+        this.cd_usuario = cd_usuario;
+        this.ds_alimento = ds_alimento;
+        this.nr_calorias = nr_calorias;
+        this.dt_refeicao = dt_refeicao;
+    }
+
     public Refeicao(long cd_usuario, String ds_alimento, float nr_calorias) {
         this.cd_usuario = cd_usuario;
         this.ds_alimento = ds_alimento;

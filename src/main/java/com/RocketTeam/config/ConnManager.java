@@ -22,19 +22,13 @@ public class ConnManager {
 
     try {
       Class.forName("oracle.jdbc.driver.OracleDriver");
-
       conn = DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:1521:xe", "system", "semsenha");
-
-      // System.out.println("Foi foda-se");
-
     } catch (SQLException e) {
       System.out.println(e);
       e.printStackTrace();
-      // System.out.println("Não Foi foda-se");
     } catch (ClassNotFoundException e) {
       System.out.println(e);
       e.printStackTrace();
-      // System.out.println("Não Foi foda-se");
     }
     return conn;
   }

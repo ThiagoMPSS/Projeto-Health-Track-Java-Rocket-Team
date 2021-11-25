@@ -26,16 +26,16 @@
 		<div class="container border p-4 rounded my-3 restrict-sm">
 			<form action="./Add/CRUD" method="POST">
 				<div class="mb-3">
-					<label for="alimento" class="form-label">Alimento</label> <input
-						type="text" name="alimento" class="form-control">
+					<label for="ds_alimento" class="form-label">Alimento</label> <input
+						type="text" name="ds_alimento" class="form-control">
 				</div>
 				<div class="mb-3">
-					<label for="calorias" class="form-label">Calorias</label> <input
-						type="text" name="calorias" class="form-control">
+					<label for="nr_calorias" class="form-label">Calorias</label> <input
+						type="text" name="nr_calorias" class="form-control">
 				</div>
 				<div class="mb-3">
-					<label for="data" class="form-label">Data</label> <input
-						type="date" name="data" class="form-control">
+					<label for="dt_refeicao" class="form-label">Data</label> <input
+						type="date" name="dt_refeicao" class="form-control">
 				</div>
 				<button type="submit" class="custom-button">Enviar</button>
 			</form>

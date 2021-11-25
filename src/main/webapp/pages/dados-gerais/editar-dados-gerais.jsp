@@ -23,17 +23,18 @@
 	<%@ include file="/jspScripts/checkAuth.jsp" %>
 	<%@ include file="/components/navbar.jsp" %>
 	<main>
+		<jsp:useBean id="dao" class="com.RocketTeam.dao.Imc_DAO" />
 		<div class="container border p-4 rounded my-3 restrict-sm">
 			<form action="./Edit/CRUD" method="POST">
+				<c:set scope="page" var="item" value='<%= dao.get(Long.parseLong(request.getParameter("id"))) %>' />
+				<input style="display:none" name="id" value="<%= request.getParameter("id") %>">
 				<div class="mb-3">
 					<label for="peso" class="form-label">Peso</label> <input
-						type="number" name="peso" class="form-control"
-						id="exampleInputEmail1" aria-describedby="emailHelp">
+						type="number" name="peso" class="form-control" value="${item.getNr_peso()}">
 				</div>
 				<div class="mb-3">
 					<label for="altura" class="form-label">Altura</label> <input
-						type="number" name="altura" class="form-control"
-						id="exampleInputPassword1">
+						type="number" name="altura" class="form-control" value="${item.getNr_altura()}">
 				</div>
 				<button type="submit" class="custom-button">Editar</button>
 			</form>

@@ -15,12 +15,12 @@ import com.RocketTeam.models.ModelDefault;
 public class Ati_Fis_DAO implements IDao {
     
     @Override
-    public ModelDefault get(long cd_imc) {
+    public ModelDefault get(long cd_Ati_Fis) throws SQLException {
         Connection conn = ConnManager.getInstance().getConn();
 
         try {
             PreparedStatement pstmt = conn.prepareStatement("SELECT * FROM T_ATI_FIS WHERE CD_ATI_FIS = ?");
-            pstmt.setLong(1, cd_imc);
+            pstmt.setLong(1, cd_Ati_Fis);
             ResultSet result = pstmt.executeQuery();
 
             if (result.next()) {
@@ -28,18 +28,49 @@ public class Ati_Fis_DAO implements IDao {
                 Date dt_atividade = result.getDate("dt_atividade");
                 String ds_frequencia_ati_fis = result.getString("ds_frequencia_ati_fis");
 
-                return new Ati_Fis(cd_usuario, dt_atividade, ds_frequencia_ati_fis);
+                return new Ati_Fis(cd_Ati_Fis, cd_usuario, dt_atividade, ds_frequencia_ati_fis);
             }
 
         } catch (SQLException e) {
             e.printStackTrace();
+            throw e;
         }
 
         return null;
     }
+    
+    @Override
+    public ModelDefault[] getByFk(long id) throws SQLException {
+        Connection conn = ConnManager.getInstance().getConn();
+        List<ModelDefault> ret = new ArrayList<ModelDefault>();
+
+        try {
+            PreparedStatement pstmt = conn.prepareStatement("SELECT * FROM T_ATI_FIS WHERE CD_USUARIO = ?");
+            pstmt.setLong(1, id);
+            ResultSet result = pstmt.executeQuery();
+
+            while (result.next()) {
+            	 long cd = result.getLong("CD_ATI_FIS");
+                 Date dt_atividade = result.getDate("dt_atividade");
+                 String ds_frequencia_ati_fis = result.getString("ds_frequencia_ati_fis");
+
+                 ret.add(new Ati_Fis(cd, id, dt_atividade, ds_frequencia_ati_fis));
+            }
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw e;
+        }
+
+        ModelDefault[] retArray = new ModelDefault[ret.size()];
+        ret.toArray(retArray);
+        
+        return retArray;
+    }
 
     @Override
-    public ModelDefault[] getAll() {
+    public ModelDefault[] getAll() throws SQLException {
         List<ModelDefault> listaPressao = new ArrayList<ModelDefault>();
         Connection conn = ConnManager.getInstance().getConn();
 
@@ -60,11 +91,13 @@ public class Ati_Fis_DAO implements IDao {
             pstmt.close();
         } catch (SQLException e) {
             e.printStackTrace();
+            throw e;
         } finally {
             try {
                 conn.close();
             } catch (SQLException e) {
                 e.printStackTrace();
+                throw e;
             }
         }
 
@@ -73,42 +106,72 @@ public class Ati_Fis_DAO implements IDao {
         return ArrayPressao;
     }
 
-    public ModelDefault insert(Ati_Fis pressao) {
-        return insert((ModelDefault) pressao);
-    }
-
-    @Override
-    public ModelDefault insert(ModelDefault dados) {
-        Ati_Fis imc = (Ati_Fis) dados;
+    public ModelDefault insert(Ati_Fis dados) throws SQLException {
         Connection conn = ConnManager.getInstance().getConn();
         
         try {
             PreparedStatement pstmt = conn.prepareStatement(
                     "INSERT INTO T_ATI_FIS (cd_ati_fis, cd_usuario, dt_atividade, ds_frequencia_ati_fis) VALUES (SEQ_T_IMC.nextVal, ?, ?, ?)");
-            pstmt.setFloat(1, imc.getCd_usuario());
-            pstmt.setDate(2, imc.getDt_atividade());
-            pstmt.setString(3, imc.getDs_frequencia_ati_fis());
+            pstmt.setFloat(1, dados.getCd_usuario());
+            pstmt.setDate(2, dados.getDt_atividade());
+            pstmt.setString(3, dados.getDs_frequencia_ati_fis());
 
 
             pstmt.executeUpdate();
 
-            imc.setCd_ati_fis(getLastIndex());
+            dados.setCd_ati_fis(getLastIndex());
             pstmt.close();
-            return imc;
+            return dados;
         } catch (SQLException e) {
             e.printStackTrace();
+            throw e;
         } finally {
             try {
                 conn.close();
             } catch (SQLException e) {
                 e.printStackTrace();
+                throw e;
             }
         }
-
-        return imc;
     }
 
-    public void delete() {
+    @Override
+    public ModelDefault insert(ModelDefault dados) throws SQLException {
+        return insert((Ati_Fis) dados);
+    }
+    
+	public void update(long id, Ati_Fis dados) throws SQLException {
+        Connection conn = ConnManager.getInstance().getConn();
+        
+        try {
+            PreparedStatement pstmt = conn.prepareStatement(
+                    "UPDATE T_ATI_FIS SET cd_usuario = ?, dt_atividade = ?, ds_frequencia_ati_fis = ? WHERE cd_ati_fis = ?");
+            pstmt.setLong(1, dados.getCd_usuario());
+            pstmt.setDate(2, dados.getDt_atividade());
+            pstmt.setString(3, dados.getDs_frequencia_ati_fis());
+            pstmt.setLong(4, id);
+
+            pstmt.executeUpdate();
+            pstmt.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw e;
+        } finally {
+            try {
+                conn.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+                throw e;
+            }
+        }
+	}
+
+	@Override
+	public void update(long id, ModelDefault dados) throws SQLException {
+		update(id, (Ati_Fis) dados);
+	}
+
+    public void delete() throws SQLException {
         Connection conn = ConnManager.getInstance().getConn();
 
         try {
@@ -118,17 +181,42 @@ public class Ati_Fis_DAO implements IDao {
             pstmt.close();
         } catch (SQLException e) {
             e.printStackTrace();
+            throw e;
         } finally {
             try {
                 conn.close();
             } catch (SQLException e) {
                 e.printStackTrace();
+                throw e;
+            }
+        }
+    }
+
+	@Override
+    public void delete(long id) throws SQLException {
+        Connection conn = ConnManager.getInstance().getConn();
+
+        try {
+            PreparedStatement pstmt = conn.prepareStatement("DELETE FROM T_ATI_FIS WHERE CD_ATI_FIS = ?");
+            pstmt.setLong(1, id);
+            
+            pstmt.executeUpdate();
+            pstmt.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw e;
+        } finally {
+            try {
+                conn.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+                throw e;
             }
         }
     }
 
     @Override
-    public int getLastIndex() {
+    public int getLastIndex() throws SQLException {
         int Index = 0;
         Connection conn = ConnManager.getInstance().getConn();
         
@@ -142,11 +230,13 @@ public class Ati_Fis_DAO implements IDao {
             pstmt.close();
         } catch (SQLException e) {
             e.printStackTrace();
+            throw e;
         } finally {
             try {
                 conn.close();
             } catch (SQLException e) {
                 e.printStackTrace();
+                throw e;
             }
         }
         return Index;

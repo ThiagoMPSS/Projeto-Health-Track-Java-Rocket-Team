@@ -26,14 +26,12 @@
 		<div class="container border p-4 rounded my-3 restrict-sm">
 			<form action="./Add/CRUD" method="POST">
 				<div class="mb-3">
-					<label for="medicao" class="form-label">MediÃ§Ã£o</label> <input
-						type="text" name="medicao" class="form-control"
-						id="exampleInputEmail1" aria-describedby="emailHelp">
+					<label for="nr_pressao" class="form-label">Medição</label> <input
+						type="text" name="nr_pressao" class="form-control">
 				</div>
 				<div class="mb-3">
-					<label for="data" class="form-label">Data</label> <input
-						type="date" name="data" class="form-control"
-						id="exampleInputPassword1">
+					<label for="dt_medicao" class="form-label">Data</label> <input
+						type="date" name="dt_medicao" class="form-control">
 				</div>
 				<button type="submit" class="custom-button">Enviar</button>
 			</form>

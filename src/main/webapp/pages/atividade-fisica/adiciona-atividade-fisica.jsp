@@ -24,18 +24,18 @@
 	<%@ include file="/components/navbar.jsp"%>
 	<main>
 		<div class="container border p-4 rounded my-3 restrict-sm">
-			<form action="./CRUD" method="POST">
-				<div class="mb-3">
+			<form action="./Add/CRUD" method="POST">
+				<!-- <div class="mb-3">
 					<label for="atividade" class="form-label">Atividade</label> <input
 						type="text" name="atividade" class="form-control">
+				</div> -->
+				<div class="mb-3">
+					<label for="ds_frequencia_ati_fis" class="form-label">Série</label> <input
+						type="text" name="ds_frequencia_ati_fis" id="ds_frequencia_ati_fis" class="form-control">
 				</div>
 				<div class="mb-3">
-					<label for="serie" class="form-label">SÃ©rie</label> <input
-						type="text" name="serie" class="form-control">
-				</div>
-				<div class="mb-3">
-					<label for="data" class="form-label">Data</label> <input
-						type="date" name="data" class="form-control">
+					<label for="dt_atividade" class="form-label">Data</label> <input
+						type="date" name="dt_atividade" id="dt_atividade" class="form-control">
 				</div>
 				<button type="submit" class="custom-button">Enviar</button>
 			</form>

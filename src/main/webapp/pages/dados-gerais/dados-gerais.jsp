@@ -1,4 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -34,42 +36,27 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<th scope="row">15/09/2021</th>
-						<td scope="col">84kg</td>
-						<td scope="col">1.80</td>
-						<td scope="col">00.00</td>
-						<td scope="col">
-							<div class="d-flex gap-2">
-								<button class="btn btn-light" onClick="location.href='./DadosGerais/Edit?id=1'">Editar</button>
-								<button class="btn btn-danger" onClick="location.href='./DadosGerais/Delete?id=1'">Deletar</button>
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<th scope="row">15/10/2021</th>
-						<td scope="col">84kg</td>
-						<td scope="col">1.80</td>
-						<td scope="col">00.00</td>
-						<td scope="col">
-							<div class="d-flex gap-2">
-								<button class="btn btn-light">Editar</button>
-								<button class="btn btn-danger">Deletar</button>
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<th scope="row">15/11/2021</th>
-						<td scope="col">84kg</td>
-						<td scope="col">1.80</td>
-						<td scope="col">00.00</td>
-						<td scope="col">
-							<div class="d-flex gap-2">
-								<button class="btn btn-light">Editar</button>
-								<button class="btn btn-danger">Deletar</button>
-							</div>
-						</td>
-					</tr>
+					<jsp:useBean id="dao" class="com.RocketTeam.dao.Imc_DAO" />
+					<% Object[] itens = dao.getByFk(1); %>
+					<c:set scope="page" var="itens" value="<%= itens %>"/>
+					<c:set scope="page" var="itensCount" value="<%= itens.length %>"/>
+					<c:if test="${itensCount < 1}">
+						<td colspan="5" style="text-align: center">Nenhum item encontrado!</td>
+					</c:if>
+					<c:forEach items="${itens}" var="item" >
+						<tr>
+							<th scope="row"><c:out value="${item.getDt_atualizacao()}" /></th>
+							<td scope="col"><c:out value="${item.getNr_peso()}" /></td>
+							<td scope="col"><c:out value="${item.getNr_altura()}" /></td>
+							<td scope="col"><c:out value="${item.getIMC_value()}" /></td>
+							<td scope="col">
+								<div class="d-flex gap-2">
+									<button class="btn btn-light" onClick="location.href='./DadosGerais/Edit?id=${item.getPK()}'">Editar</button>
+									<button class="btn btn-danger" onClick="location.href='./DadosGerais/Delete/CRUD?id=${item.getPK()}'">Deletar</button>
+								</div>
+							</td>
+						</tr>
+					</c:forEach>
 				</tbody>
 			</table>
 		</div>

@@ -14,7 +14,7 @@ import com.RocketTeam.models.Refeicao;
 
 public class RefeicaoDAO implements IDao {
     @Override
-    public ModelDefault get(long cd_refeicao) {
+    public ModelDefault get(long cd_refeicao) throws SQLException {
         Connection conn = ConnManager.getInstance().getConn();
 
         try {
@@ -34,13 +34,45 @@ public class RefeicaoDAO implements IDao {
 
         } catch (SQLException e) {
             e.printStackTrace();
+            throw e;
         }
 
         return null;
     }
+    
+    @Override
+    public ModelDefault[] getByFk(long id) throws SQLException {
+        Connection conn = ConnManager.getInstance().getConn();
+        List<ModelDefault> ret = new ArrayList<ModelDefault>();
+
+        try {
+            PreparedStatement pstmt = conn.prepareStatement("SELECT * FROM T_REFE WHERE CD_USUARIO = ?");
+            pstmt.setLong(1, id);
+            ResultSet result = pstmt.executeQuery();
+
+            while (result.next()) {
+                long cd = result.getLong("cd_refeicao");
+                String ds_alimento = result.getString("ds_alimento");
+                float nr_calorias = result.getFloat("nr_calorias");
+                Date dt_refeicao = result.getDate("dt_refeicao");
+                
+
+                ret.add(new Refeicao(cd, id, ds_alimento, nr_calorias, dt_refeicao));
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw e;
+        }
+
+        ModelDefault[] retArray = new ModelDefault[ret.size()];
+        ret.toArray(retArray);
+        
+        return retArray;
+    }
 
     @Override
-    public ModelDefault[] getAll() {
+    public ModelDefault[] getAll() throws SQLException {
         List<ModelDefault> listaPressao = new ArrayList<ModelDefault>();
         Connection conn = ConnManager.getInstance().getConn();
 
@@ -62,11 +94,13 @@ public class RefeicaoDAO implements IDao {
             pstmt.close();
         } catch (SQLException e) {
             e.printStackTrace();
+            throw e;
         } finally {
             try {
                 conn.close();
             } catch (SQLException e) {
                 e.printStackTrace();
+                throw e;
             }
         }
 
@@ -75,44 +109,75 @@ public class RefeicaoDAO implements IDao {
         return ArrayPressao;
     }
 
-    public ModelDefault insert(Refeicao pressao) {
-        return insert((ModelDefault) pressao);
-    }
-
-    @Override
-    public ModelDefault insert(ModelDefault dados) {
-        Refeicao refeicao = (Refeicao) dados;
+    public ModelDefault insert(Refeicao dados) throws SQLException {
         Connection conn = ConnManager.getInstance().getConn();
         
         try {
             PreparedStatement pstmt = conn.prepareStatement(
                     "INSERT INTO T_REFE (cd_refeicao, cd_usuario, ds_alimento, nr_calorias, dt_refeicao) VALUES (SEQ_T_IMC.nextVal, ?, ?, ?, ?)");
-            pstmt.setLong(1, refeicao.getCd_usuario());
-            pstmt.setString(2, refeicao.getDs_alimento());
-            pstmt.setFloat(3, refeicao.getNr_calorias());
-            pstmt.setDate(4, refeicao.getDt_refeicao());
+            pstmt.setLong(1, dados.getCd_usuario());
+            pstmt.setString(2, dados.getDs_alimento());
+            pstmt.setFloat(3, dados.getNr_calorias());
+            pstmt.setDate(4, dados.getDt_refeicao());
 
 
             pstmt.executeUpdate();
 
-            refeicao.setCd_refeicao(getLastIndex());
+            dados.setCd_refeicao(getLastIndex());
             pstmt.close();
-            return refeicao;
+            return dados;
         } catch (SQLException e) {
             e.printStackTrace();
+            throw e;
         } finally {
             try {
                 conn.close();
             } catch (SQLException e) {
                 e.printStackTrace();
+                throw e;
             }
         }
-
-        return refeicao;
     }
 
     @Override
-    public void delete() {
+    public ModelDefault insert(ModelDefault dados) throws SQLException {
+    	return insert((Refeicao)dados);
+    }
+
+    public void update(long id, Refeicao dados) throws SQLException {
+    	Connection conn = ConnManager.getInstance().getConn();
+        
+        try {
+            PreparedStatement pstmt = conn.prepareStatement(
+                    "UPDATE T_REFE SET cd_usuario = ?, ds_alimento = ?, nr_calorias = ?, dt_refeicao = ? WHERE cd_refeicao = ?");
+            pstmt.setLong(1, dados.getCd_usuario());
+            pstmt.setString(2, dados.getDs_alimento());
+            pstmt.setFloat(3, dados.getNr_calorias());
+            pstmt.setDate(4, dados.getDt_refeicao());
+            pstmt.setLong(5, id);
+
+            pstmt.executeUpdate();
+            pstmt.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw e;
+        } finally {
+            try {
+                conn.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+                throw e;
+            }
+        }
+    }
+
+	@Override
+	public void update(long id, ModelDefault dados) throws SQLException {
+		update(id, (Refeicao) dados);
+	}
+
+    @Override
+    public void delete() throws SQLException {
         Connection conn = ConnManager.getInstance().getConn();
 
         try {
@@ -122,17 +187,42 @@ public class RefeicaoDAO implements IDao {
             pstmt.close();
         } catch (SQLException e) {
             e.printStackTrace();
+            throw e;
         } finally {
             try {
                 conn.close();
             } catch (SQLException e) {
                 e.printStackTrace();
+                throw e;
             }
         }
     }
 
+	@Override
+	public void delete(long id) throws SQLException {
+		Connection conn = ConnManager.getInstance().getConn();
+
+        try {
+            PreparedStatement pstmt = conn.prepareStatement("DELETE FROM T_REFE WHERE CD_REFEICAO = ?");
+            pstmt.setLong(1, id);
+            
+            pstmt.executeUpdate();
+            pstmt.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw e;
+        } finally {
+            try {
+                conn.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+                throw e;
+            }
+        }
+	}
+
     @Override
-    public int getLastIndex() {
+    public int getLastIndex() throws SQLException {
         int Index = 0;
         Connection conn = ConnManager.getInstance().getConn();
         
@@ -146,11 +236,13 @@ public class RefeicaoDAO implements IDao {
             pstmt.close();
         } catch (SQLException e) {
             e.printStackTrace();
+            throw e;
         } finally {
             try {
                 conn.close();
             } catch (SQLException e) {
                 e.printStackTrace();
+                throw e;
             }
         }
         return Index;

@@ -19,6 +19,13 @@ public class Imc extends ModelDefault {
         this.dt_atualizacao = dt_atualizacao;
     }
 
+    public Imc(long cd_usuario, float nr_peso, float nr_altura, Date dt_atualizacao) {
+        this.cd_usuario = cd_usuario;
+        this.nr_peso = nr_peso;
+        this.nr_altura = nr_altura;
+        this.dt_atualizacao = dt_atualizacao;
+    }
+
     public Imc(long cd_usuario, float nr_peso, float nr_altura) {
         this.cd_usuario = cd_usuario;
         this.nr_peso = nr_peso;
@@ -68,7 +75,8 @@ public class Imc extends ModelDefault {
     }
 
     public float getIMC_value() {
-        return getNr_peso() / (getNr_altura() * getNr_altura());
+    	float altura = getNr_altura() / 100;
+        return getNr_peso() / (altura * altura);
     }
     
     @Override
